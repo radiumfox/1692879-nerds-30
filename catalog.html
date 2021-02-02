@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
   <head>
     <meta charset="UTF-8">
@@ -10,12 +10,13 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
 
-  <body>
-    <header>
-      <a href="index.html">
-        <img src="img/content/nerds-logo.svg" alt="Нёрдс" width="159.87" height="65.02">
+  <body class="page-body">
+
+    <header class="main-header">
+      <a class="main-header-logo" href="index.html">
+        <img src="img/content/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
       </a>
-      <nav>
+      <nav class="main-navigation">
         <ul>
           <li><a href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
@@ -23,58 +24,58 @@
           <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
-      <div><a href="#">Корзина</a></div>
-      <div>
+      <div class="basket"><a href="#">Корзина</a></div>
+      <div class="title-wrapper">
         <h1>Магазин готовых шаблонов</h1>
       </div>
     </header>
 
-    <main>
+    <main class="wrapper">
 
-      <div>
+      <div class="content-wrapper">
 
-        <div>
+        <div class="filter-wrapper">
           <section>
             <h2>Фильтр готовых шаблонов</h2>
             <form method="GET" action="https://echo.htmlacademy.ru">
 
-              <fieldset>
+              <fieldset class="price-filter">
                 <legend>Стоимость:</legend>
                 <input type="range" name="price" id="filter-price" min="0" max="15000" value="12000">
                 <span>от <input type="number" min="0" max="15000"> до <input type="number" min="0" max="15000"></span>
               </fieldset>
 
-              <fieldset>
+              <fieldset class="grid-filter">
                 <legend>Сетка:</legend>
-                <ul>
-                  <li>
+                <ul class="grid-list">
+                  <li class="grid-item">
                     <label><input type="radio" name="grid" value="0" checked>Адаптиваная</label>
                   </li>
-                  <li>
+                  <li class="grid-item">
                     <label><input type="radio" name="grid" value="1">Фиксированная</label>
                   </li>
-                  <li>
+                  <li class="grid-item">
                     <label><input type="radio" name="grid" value="2">Резиновая</label>
                   </li>
                 </ul>
               </fieldset>
 
-              <fieldset>
+              <fieldset class="features-filter">
                 <legend>Особенности:</legend>
-                <ul>
-                  <li>
+                <ul class="features-list">
+                  <li class="features-item">
                     <label><input type="checkbox" name="features" value="slider" checked>Слайдер</label>
                   </li>
-                  <li>
+                  <li class="features-item">
                     <label><input type="checkbox" name="features" value="advantages-block">Блок преимуществ</label>
                   </li>
-                  <li>
+                  <li class="features-item">
                     <label><input type="checkbox" name="features" value="news" checked>Новости</label>
                   </li>
-                  <li>
+                  <li class="features-item">
                     <label><input type="checkbox" name="features" value="gallery">Галерея</label>
                   </li>
-                  <li>
+                  <li class="features-item">
                     <label><input type="checkbox" name="features" value="basket">Корзина</label>
                   </li>
                 </ul>
@@ -85,113 +86,113 @@
           </section>
         </div>
 
-        <div>
+        <div class="sorting">
           <span>Сортировать:</span>
-          <ul>
-            <li><a href="#">По цене</a></li>
-            <li><a href="#">По типу</a></li>
-            <li><a href="#">По функционалу</a></li>
+          <ul class="sorting-list">
+            <li class="sorting-item"><a href="#">По цене</a></li>
+            <li class="sorting-item"><a href="#">По типу</a></li>
+            <li class="sorting-item"><a href="#">По функционалу</a></li>
           </ul>
         </div>
-        <div>
-          <a href="#">Вниз</a>
-          <a href="#">Вверх</a>
+        <div class="arrows">
+          <a class="down" href="#">Вниз</a>
+          <a class="up" href="#">Вверх</a>
         </div>
 
-        <div>
+        <div class="templates-wrapper">
           <section>
             <h2>Список шаблонов</h2>
-            <ul>
-              <li>
+            <ul class="template-list">
+              <li class="template-item">
                 <article>
-                  <div>
-                    <div>
+                  <div> <!-- зачем нужна эта обертка, если уже есть li и article? -->
+                    <div class="item-img">
                       <img src="img/content/sedona.jpg" alt="Sedona" width="358" height="578">
                     </div>
-                    <div>
+                    <div class="desc-box">
                       <h1><a href="#">SEDONA</a></h1>
                       <p>Информационный сайт для туристов</p>
-                      <button type="button">9900 Р.</button>
+                      <button class="red-button" type="button">9900 Р.</button>
                     </div>
                   </div>
                 </article>
               </li>
-              <li>
+              <li class="templates-item">
                 <article>
                   <div>
-                    <div>
+                    <div class="item-img">
                       <img src="img/content/pink.jpg" alt="PINK" width="358" height="578">
                     </div>
-                    <div>
+                    <div class="desc-box">
                       <h1><a href="#">PINK APP</a></h1>
                       <p>Продуктовый лендинг приложения iOS и Android</p>
-                      <button type="button">9900 Р.</button>
+                      <button class="red-button" type="button">9900 Р.</button>
                     </div>
                   </div>
                 </article>
               </li>
-              <li>
+              <li class="templates-item">
                 <article>
                   <div>
-                    <div>
+                    <div class="item-img">
                       <img src="img/content/barbershop.jpg" alt="Barbershop" width="358" height="578">
                     </div>
-                    <div>
+                    <div class="desc-box">
                       <h1><a href="#">BARBERSHOP</a></h1>
                       <p>Сайт салона красоты. Для мужчин, да.</p>
-                      <button type="button">9900 Р.</button>
+                      <button class="red-button" type="button">9900 Р.</button>
                     </div>
                   </div>
                 </article>
               </li>
-              <li>
+              <li class="templates-item">
                 <article>
                   <div>
-                    <div>
+                    <div class="item-img">
                       <img src="img/content/mishka.jpg" alt="Mishka" width="358" height="578">
                     </div>
-                    <div>
+                    <div class="desc-box">
                       <h1><a href="#">MISHKA</a></h1>
                       <p>Интернет-магазин вязаных игрушек.</p>
-                      <button type="button">9900 Р.</button>
+                      <button class="red-button" type="button">9900 Р.</button>
                     </div>
                   </div>
                 </article>
               </li>
-              <li>
+              <li class="templates-item">
                 <article>
                   <div>
-                    <div>
+                    <div class="item-img">
                       <img src="img/content/aplus.jpg" alt="A PLUS" width="358" height="578">
                     </div>
-                    <div>
+                    <div class="desc-box">
                       <h1><a href="#">A PLUS</a></h1>
                       <p>Лендинг курсов повышения квалификации.</p>
-                      <button type="button">9900 Р.</button>
+                      <button class="red-button" type="button">9900 Р.</button>
                     </div>
                   </div>
                 </article>
               </li>
-              <li>
+              <li class="templates-item">
                 <article>
                   <div>
-                    <div>
+                    <div class="item-img">
                       <img src="img/content/kvast.jpg" alt="КВАСТ" width="358" height="578">
                     </div>
-                    <div>
+                    <div class="desc-box">
                       <h1><a href="#">КВАСТ</a></h1>
                       <p>Промо-сайт производителя крафтового кваса.</p>
-                      <button type="button">9900 Р.</button>
+                      <button class="red-button" type="button">9900 Р.</button>
                     </div>
                   </div>
                 </article>
               </li>
             </ul>
-            <ul>
-              <li><a>1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">Следующая</a></li>
+            <ul class="pagination">
+              <li class="page-button"><a>1</a></li>
+              <li class="page-button"><a href="#">2</a></li>
+              <li class="page-button"><a href="#">3</a></li>
+              <li class="grey-button"><a href="#">Следующая</a></li>
             </ul>
           </section>
         </div>
@@ -200,37 +201,37 @@
 
     </main>
 
-    <footer>
+    <footer class="main-footer">
       <section>
         <h2>Контакты</h2>
-        <div>
-          <div>
+        <div class="footer-map-contacts">
+          <div class="footer-contact">
             <p>NЁRDS DESIGN STUDIO</p>
             <address>191186 Санкт-Петербруг, ул. Б.Конюшенная, д.19/8</address>
             <a href="tel:+78122757575">+7 (812) 275-75-75</a>
-            <p><a href="#">Напишите нам</a></p>
+            <p><a class="red-button" href="#">Напишите нам</a></p>
           </div>
-          <img src="img/content/map-marker.png" alt="маркер местоположения">
-          <img src="img/content/map.jpg" alt="карта местоположения">
+          <img src="img/content/map-marker.png" alt="маркер местоположения" width="231" height="190">
+          <img src="img/content/map.jpg" alt="карта местоположения" width="1440" height="416">
         </div>
       </section>
-      <section>
+      <section class="footer-social">
         <h2>Социальные сети</h2>
-        <ul>
-          <li><a href="#"><img src="img/content/vkontakte.svg" alt="Вконтакте"></a></li>
-          <li><a href="#"><img src="img/content/facebook.svg" alt="Facebook"></a></li>
-          <li><a href="#"><img src="img/content/instagram.svg" alt="Instagram"></a></li>
+        <ul class="social-list">
+          <li class="social-item"><a href="#"><img src="img/content/vkontakte.svg" alt="Вконтакте" width="81" height="81"></a></li>
+          <li class="social-item"><a href="#"><img src="img/content/facebook.svg" alt="Facebook" width="81" height="81"></a></li>
+          <li class="social-item"><a href="#"><img src="img/content/instagram.svg" alt="Instagram" width="81" height="81"></a></li>
         </ul>
-        <div>
-          <p>Давайте дружить, это выгодно!</p>
+        <div class="discount-wrapper">
+          <p class="discount-proposal">Давайте дружить, это выгодно!</p>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </section>
     </footer>
 
-    <section>
+    <section class="write-us">
       <h2>Напишите нам</h2>
-      <form action="#" method="post">
+      <form class="feedback-form" action="#" method="post">
         <p>
           <label for="appointment-name">Ваше имя:</label>
           <input id="appointment-name" type="text" name="login" value="" placeholder="Имя Фамилия">
@@ -243,9 +244,9 @@
           <p>Текст письма:</p>
           <p><textarea name="message" rows="5" placeholder="В свободной форме"></textarea></p>
         </div>
-        <button type="submit">Отправить</button>
+        <button class="red-button" type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="close" type="button">Закрыть</button>
     </section>
 
   </body>
