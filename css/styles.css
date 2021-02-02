@@ -1,0 +1,32 @@
+/* Variables */
+
+:root {
+    --color-black: #000000;
+    --color-dark: #283136;
+    --color-white: #FFFFFF;
+    --color-grey: #eeeeee;
+    --color-red: #FB565A;
+    --color-red-hover: #E74246;
+    --color-red-click: #D7373B;
+    --color-green: #00CA74;
+    --color-green-hover: #00BC6C;
+    --color-green-click: #00AA62;
+    --color-yellow: #EFC849;
+    --color-yellow-hover: #EAB534;
+    --color-yellow-click: #E5A722;
+    --color-grey-hover: #DFDFDF;
+    --color-grey-click: #D5D5D5;
+}
+
+/* Global */
+
+ body {
+    min-width: 1160px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--color-dark);
+  }
