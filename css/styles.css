@@ -3,8 +3,8 @@
 :root {
     --color-black: #000000;
     --color-dark: #283136;
-    --color-white: #FFFFFF;
-    --color-grey: #eeeeee;
+    --basic-white: #FFFFFF;
+    --basic-grey: #eeeeee;
     --color-red: #FB565A;
     --color-red-hover: #E74246;
     --color-red-click: #D7373B;
@@ -16,12 +16,14 @@
     --color-yellow-click: #E5A722;
     --color-grey-hover: #DFDFDF;
     --color-grey-click: #D5D5D5;
+    --color-grey: #666666;
+    --color-dark-grey: #444444;
 }
 
 /* Global */
 
  body {
-    min-width: 1160px;
+    min-width: 1400px;
     margin: 0;
     padding: 0;
     font-family: "Roboto", Arial, sans-serif;
@@ -29,4 +31,159 @@
     line-height: 24px;
     font-weight: 400;
     color: var(--color-dark);
+    background-color: var(--basic-white);
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  img  {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .main-header{
+    background-color: var(--basic-grey);
+  }
+
+  .site-navigation {
+    list-style: none;
+  }
+
+  .site-navigation a {
+    line-height: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-black);
+    text-align: center;
+  }
+
+  .basket a {
+    line-height: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-black);
+  }
+
+.slider-slogan {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.red-button {
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--color-red);
+}
+
+.services-list {
+  list-style: none;
+}
+
+.services-list h3 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--color-black);
+}
+
+.services-item {
+ text-align: center;
+}
+
+.green-button {
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--color-green);
+}
+
+.yellow-button {
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--color-yellow);
+}
+
+.introduction {
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+  color: var(--color-black);
+}
+
+.options {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-us-right p {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.benefits-item {
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.benefits-item span {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.benefits-list dd {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.partners-list {
+  list-style: none;
+}
+
+.partners-item  {
+  text-align: center;
+}
+
+.footer-contact span {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.address,
+.phone-number {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-grey);
+}
+
+.discount-wrapper span {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.discount-wrapper p {
+  line-height: 22px;
+  color: var(--color-dark-grey);
+}

@@ -8,7 +8,7 @@
     <link rel="icon" href="img/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic;display=swap">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="normalize.css">
   </head>
@@ -19,7 +19,7 @@
       <a class="main-header-logo">
         <img src="img/content/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
       </a>
-      <nav class="main-navigation">
+      <nav class="main-navigation"> <!-- нужен ли здесь класс? -->
         <ul class="site-navigation">
           <li><a href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
@@ -104,11 +104,11 @@
           <img src="img/decorative/nerds-illustration.jpg" alt="Нёрдс" width="360" height="208">
           <p>С 2004 года точность во всём:</p>
           <dl class="benefits-list">
-            <dt class="benefits-item">146%</dt>
+            <dt class="benefits-item">146<span>%</span></dt>
             <dd>Уровень самоотдачи</dd>
-            <dt class="benefits-item">100%</dt>
+            <dt class="benefits-item">100<span>%</span></dt>
             <dd>Соблюдение сроков</dd>
-            <dt class="benefits-item">50%</dt>
+            <dt class="benefits-item">50<span>%</span></dt>
             <dd>Минимальная предоплата</dd>
           </dl>
         </div>
@@ -116,10 +116,10 @@
       <section class="our-partners">
         <h2>Наши партнёры</h2>
         <ul class="partners-list">
-          <li><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/htmlacademy_logo.png" alt="HTMLacademy" width="199" height="68"></a></li>
-          <li><a href="#"><img src="img/content/barbershop_logo.png" alt="Barbershop Borodinski" width="209" height="90"></a></li>
-          <li><a href="#"><img src="img/content/pink_logo.png" alt="PINK" width="185" height="52"></a></li>
-          <li><a href="#"><img src="img/content/mishka_logo.png" alt="Mishka" width="173" height="84"></a></li>
+          <li class="partners-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/htmlacademy_logo.png" alt="HTMLacademy" width="199" height="68"></a></li>
+          <li class="partners-item"><a href="#"><img src="img/content/barbershop_logo.png" alt="Barbershop Borodinski" width="209" height="90"></a></li>
+          <li class="partners-item"><a href="#"><img src="img/content/pink_logo.png" alt="PINK" width="185" height="52"></a></li>
+          <li class="partners-item"><a href="#"><img src="img/content/mishka_logo.png" alt="Mishka" width="173" height="84"></a></li>
         </ul>
       </section>
     </main>
@@ -127,11 +127,11 @@
     <footer class="main-footer">
       <section>
         <h2>Контакты</h2>
-        <div class="footer-map-contacts">
+        <div class="footer-map">
           <div class="footer-contact">
-            <p>NЁRDS DESIGN STUDIO</p>
-            <address>191186 Санкт-Петербруг, ул. Б.Конюшенная, д.19/8</address>
-            <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+            <span>NЁRDS DESIGN STUDIO</span>
+            <address class="address">191186 Санкт-Петербруг, ул. Б.Конюшенная, д.19/8</address>
+            <a class="phone-number" href="tel:+78122757575">+7 (812) 275-75-75</a>
             <p><a class="red-button" href="#">Напишите нам</a></p>
           </div>
           <img src="img/content/map-marker.png" alt="маркер местоположения" width="231" height="190">
@@ -146,7 +146,7 @@
           <li class="social-item"><a href="#"><img src="img/content/instagram.svg" alt="Instagram" width="21" height="21"></a></li>
         </ul>
         <div class="discount-wrapper">
-          <p class="discount-proposal">Давайте дружить, это выгодно!</p>
+          <span>Давайте дружить, это выгодно!</span>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </section>
