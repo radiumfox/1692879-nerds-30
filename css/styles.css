@@ -1,84 +1,172 @@
 /* Variables */
 
 :root {
-    --color-black: #000000;
-    --color-dark: #283136;
-    --basic-white: #FFFFFF;
-    --basic-grey: #eeeeee;
-    --color-red: #FB565A;
-    --color-red-hover: #E74246;
-    --color-red-click: #D7373B;
-    --color-green: #00CA74;
-    --color-green-hover: #00BC6C;
-    --color-green-click: #00AA62;
-    --color-yellow: #EFC849;
-    --color-yellow-hover: #EAB534;
-    --color-yellow-click: #E5A722;
-    --color-grey-hover: #DFDFDF;
-    --color-grey-click: #D5D5D5;
-    --color-grey: #666666;
-    --color-dark-grey: #444444;
+ --primary-light: #FFFFFF;
+ --secondary-light: #eeeeee;
+ --primary-dark: #283136;
+ --secondary-dark: #000000;
+ --color-light-grey: #A6A6A6;
+ --color-grey: #666666;
+ --color-dark-grey: #444444;
+ --socials: #E1E1E1;
+ --page-button-border: #DBDBDB;
+ --form-quiet: #D7DCDE;
+ --form-hover: #B4B9BB;
+ --color-grey-hover: #DFDFDF;
+ --color-grey-click: #D5D5D5;
+ --color-red: #FB565A;
+ --color-red-hover: #E74246;
+ --color-red-click: #D7373B;
+ --color-green: #00CA74;
+ --color-green-hover: #00BC6C;
+ --color-green-click: #00AA62;
+ --color-yellow: #EFC849;
+ --color-yellow-hover: #EAB534;
+ --color-yellow-click: #E5A722;
 }
 
 /* Global */
 
- body {
-    min-width: 1400px;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: var(--color-dark);
-    background-color: var(--basic-white);
-  }
+body {
+  min-width: 1420px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  img  {
-    max-width: 100%;
-    height: auto;
-  }
+img  {
+  max-width: 100%;
+  height: auto;
+}
 
-  .main-header{
-    background-color: var(--basic-grey);
-  }
+/* buttons */
 
-  .site-navigation {
-    list-style: none;
-  }
+.red-button {
+  font-family: inherit;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 3px;
+}
 
-  .site-navigation a {
-    line-height: 30px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--color-black);
-    text-align: center;
-  }
+.red-button:hover {
+  color: var(--primary-light);
+  background-color: var(--color-red-hover);
+}
 
-  .basket a {
-    line-height: 30px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--color-black);
-  }
+.red-button:focus {
+  color: rgba(var(--primary-light), 0.3);  /* не отображается как надо :( */
+  background-color: var(--color-red-click);
+}
+
+.green-button {
+  font-family: inherit;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  background-color: var(--color-green);
+  border: none;
+  border-radius: 3px;
+}
+
+.green-button:hover {
+  color: var(--primary-light);
+  background-color: var(--color-green-hover);
+}
+
+.green-button:focus {
+  color: rgba(var(--primary-light), 0.3);
+  background-color: var(--color-green-click);
+}
+
+.yellow-button {
+  font-family: inherit;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  background-color: var(--color-yellow);
+  border: none;
+  border-radius: 3px;
+}
+
+.yellow-button:hover {
+  color: var(--primary-light);
+  background-color: var(--color-yellow-hover);
+}
+
+.yellow-button:focus {
+  color: rgba(var(--primary-light), 0.3);
+  background-color: var(--color-yellow-click);
+}
+
+/* header */
+
+.main-header{
+  background-color: var(--secondary-light);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.basket a {
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+.main-navigation a:hover,
+.basket a:hover {
+  color: var(--color-red);
+}
+
+.main-navigation a:focus,
+.basket a:focus {
+  color: rgba(var(--secondary-dark), 0.3);
+}
+
+.main-navigation a:active,
+.basket a:active {
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-red);
+}
+
+/* main */
+   /* slider */
 
 .slider-slogan {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
-  color: var(--color-black);
+  color: var(--secondary-dark);
 }
 
-.red-button {
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: var(--color-red);
+   /* services */
+
+.services {
+  text-align: center;
 }
 
 .services-list {
@@ -86,38 +174,20 @@
 }
 
 .services-list h3 {
-  text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
-  color: var(--color-black);
-}
-
-.services-item {
- text-align: center;
-}
-
-.green-button {
-  line-height: 18px;
-  font-weight: 500;
   text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: var(--color-green);
+  color: var(--secondary-dark);
 }
 
-.yellow-button {
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: var(--color-yellow);
-}
+   /* about us */
 
 .introduction {
   font-size: 45px;
-  font-weight: 500;
   line-height: 45px;
-  color: var(--color-black);
+  font-weight: 500;
+  color: var(--secondary-dark);
 }
 
 .options {
@@ -125,10 +195,28 @@
   text-transform: uppercase;
 }
 
+.options-list {
+ list-style: none;
+}
+
+/*
+.options-list li {
+  list-style-image: url(../img/decorative/red-line.svg);    тут я попробовала сделать красные черточки, взяв код с рандомного сайта, и второй пример выглядит как надо, но я хз почему
+  list-style-position: inside;
+}
+
+/*.options-list li{
+  padding-left: 36px;
+  background-image: url(../img/decorative/red-line.svg);
+  background-position: 0 0;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+} */
+
 .about-us-right p {
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: var(--secondary-dark);
 }
 
 .benefits-item {
@@ -136,18 +224,18 @@
   line-height: 64px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: var(--secondary-dark);
 }
 
 .benefits-item span {
   font-size: 26px;
   line-height: 40px;
   font-weight: 700;
-  color: var(--color-black);
+  vertical-align: text-top;
+  color: var(--secondary-dark);
 }
 
 .benefits-list dd {
-  font-size: 16px;
   line-height: 18px;
 }
 
@@ -155,23 +243,19 @@
   list-style: none;
 }
 
-.partners-item  {
-  text-align: center;
-}
+/* footer */
 
 .footer-contact span {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: var(--secondary-dark);
 }
 
 .address,
 .phone-number {
   font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
   line-height: 18px;
   color: var(--color-grey);
 }
@@ -180,10 +264,210 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--secondary-dark);
 }
 
 .discount-wrapper p {
   line-height: 22px;
   color: var(--color-dark-grey);
 }
+
+.write-us h2 {
+  font-size: 45px;
+  line-height: 53px;
+  font-weight: 700;
+  color: var(--secondary-dark);
+}
+
+.social-list {
+  list-style: none;
+}
+
+/*
+.circle {
+  background: var(--secondary-light);
+  clip-path: circle(50%);
+  height: 81px;
+  width: 81px;
+} */
+
+
+/* catalog.html */
+
+  /* header */
+
+.title-wrapper h1 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--secondary-dark);
+  text-align: center;
+}
+
+/* filter*/
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-list a:focus {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+.sorting-list a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+.sorting span {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+.filter-wrapper legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+.grid-list,
+.features-list {
+  list-style: none;
+  line-height: 19px;
+}
+
+.show-button {
+  font-family: inherit;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--secondary-light);
+  color: var(--secondary-dark);
+  border: none;
+  border-radius: 3px;
+}
+
+.template-list {
+  list-style: none;
+}
+
+.desc-box {
+  display: none;
+  background-color: var(--secondary-light);
+  text-align: center;
+}
+
+.product-card:hover .desc-box{
+  display: block;
+  background-color: var(--secondary-light);
+  text-align: center;
+}  /* ээээ не уверена, что это надо было делать, но сделала */
+
+.desc-box a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--secondary-dark);
+}
+
+.desc-box a:hover {
+  color: var(--color-red);
+}
+
+.desc-box a:focus {
+  color: rgba(var(--secondary-dark), 0.3)
+}
+
+.desc-box p {
+  line-height: 18px;
+  color: var(--color-grey);
+}
+
+.pagination {
+  list-style: none;
+}
+
+.page-button a {
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+  background-color: var(--secondary-light);
+  border:none;
+  border-radius: 3px;
+}
+
+.page-button a:hover {
+  background-color: var(--color-grey-hover);
+}
+
+.page-button a:focus {
+  background-color: var(--color-grey-click);
+}
+
+.page-button a:active {
+  background-color: var(--primary-light);
+  border: 3px solid var(--page-button-border);
+}
+
+/* feedback form */
+
+.feedback-form p {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"]{
+border: 2px solid var(--form-quiet);
+color: var(--form-quiet);
+border-radius: 3px;
+}
+
+.message-area {
+border: 2px solid var(--form-quiet);
+border-radius: 3px;
+resize: none;
+}
+
+.message-area:hover{
+  border-color: var(--form-hover);
+  border-radius: 3px;
+}
+
+.message-area:focus {
+  outline-color: var(--secondary-dark);
+  border-radius: 3px;
+  color: var(--secondary-dark);
+}
+
+.feedback-form input:hover {
+border-color: var(--form-hover);
+border-radius: 3px;
+color: var(--form-hover);
+}
+
+.feedback-form input:focus {
+  outline-color: var(--secondary-dark);
+  border-radius: 3px;
+  color: var(--secondary-dark);
+}
+
+.feedback-form input:invalid {
+  border-color: var(--color-red-hover);
+  border-radius: 3px;
+  color: var(--color-red-hover);
+}
+
+
+
