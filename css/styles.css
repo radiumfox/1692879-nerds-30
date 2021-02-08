@@ -50,73 +50,88 @@ img  {
 
 /* buttons */
 
-.red-button {
+.button {
+  font-size: 16px;
   font-family: inherit;
-  text-align: center;
-  vertical-align: middle;
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
   color: var(--primary-light);
-  background-color: var(--color-red);
   border: none;
   border-radius: 3px;
 }
 
-.red-button:hover {
-  color: var(--primary-light);
+.moreinfo-button,
+.order-redbutton,
+.writeus-button,
+.send-button,
+.show-button,
+.price-button {
+  background-color: var(--color-red);
+  font-family: inherit;
+}
+
+.moreinfo-button:hover,
+.order-redbutton:hover,
+.writeus-button:hover,
+.send-button:hover,
+.show-button:hover,
+.price-button:hover {
   background-color: var(--color-red-hover);
 }
 
-.red-button:focus {
-  color: rgba(var(--primary-light), 0.3);  /* не отображается как надо :( */
+.moreinfo-button:focus,
+.order-redbutton:focus,
+.writeus-button:focus,
+.send-button:focus,
+.show-button:focus,
+.price-button:focus {
+  color: rgba(var(--primary-light), 0.3);
   background-color: var(--color-red-click);
 }
 
-.green-button {
-  font-family: inherit;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--primary-light);
+.order-greenbutton {
   background-color: var(--color-green);
-  border: none;
-  border-radius: 3px;
 }
 
-.green-button:hover {
-  color: var(--primary-light);
+.order-greenbutton:hover {
   background-color: var(--color-green-hover);
 }
 
-.green-button:focus {
+.order-greenbutton:focus {
   color: rgba(var(--primary-light), 0.3);
   background-color: var(--color-green-click);
 }
 
-.yellow-button {
-  font-family: inherit;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--primary-light);
+.order-yellowbutton {
   background-color: var(--color-yellow);
-  border: none;
-  border-radius: 3px;
 }
 
-.yellow-button:hover {
-  color: var(--primary-light);
+.order-yellowbutton:hover {
   background-color: var(--color-yellow-hover);
 }
 
-.yellow-button:focus {
+.order-yellowbutton:focus {
   color: rgba(var(--primary-light), 0.3);
   background-color: var(--color-yellow-click);
+}
+
+.page-button {
+  color: var(--secondary-dark);
+  background-color: var(--secondary-light);
+}
+
+.page-button:hover {
+  background-color: var(--color-grey-hover);
+}
+
+.page-button:focus {
+  background-color: var(--color-grey-click);
+}
+
+.page-button:active {
+  background-color: var(--primary-light);
+  border: 3px solid var(--page-button-border);
 }
 
 /* header */
@@ -346,16 +361,6 @@ img  {
   line-height: 19px;
 }
 
-.show-button {
-  font-family: inherit;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  background-color: var(--secondary-light);
-  color: var(--secondary-dark);
-  border: none;
-  border-radius: 3px;
-}
 
 .template-list {
   list-style: none;
@@ -395,29 +400,6 @@ img  {
 
 .pagination {
   list-style: none;
-}
-
-.page-button a {
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--secondary-dark);
-  background-color: var(--secondary-light);
-  border:none;
-  border-radius: 3px;
-}
-
-.page-button a:hover {
-  background-color: var(--color-grey-hover);
-}
-
-.page-button a:focus {
-  background-color: var(--color-grey-click);
-}
-
-.page-button a:active {
-  background-color: var(--primary-light);
-  border: 3px solid var(--page-button-border);
 }
 
 /* feedback form */
