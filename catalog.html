@@ -8,12 +8,12 @@
     <link rel="icon" href="img/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="normalize.css">
   </head>
 
-  <body class="page-body">
+  <body class="page-body inner-page">
 
     <header class="main-header">
       <a class="main-header-logo" href="index.html">
@@ -83,7 +83,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <button type="submit">Показать</button>
+              <button class="show-button" type="submit">Показать</button>
 
             </form>
           </section>
@@ -94,12 +94,12 @@
           <ul class="sorting-list">
             <li class="sorting-item"><a href="#">По цене</a></li>
             <li class="sorting-item"><a href="#">По типу</a></li>
-            <li class="sorting-item"><a href="#">По функционалу</a></li>
+            <li class="sorting-item"><a href="#">По названию</a></li>
           </ul>
         </div>
         <div class="arrows">
-          <a class="down" href="#">Вниз</a>
-          <a class="up" href="#">Вверх</a>
+          <a class="down" href="#"><img src="img/decorative/icon-down-dir.svg"></a>
+          <a class="up" href="#"><img src="img/decorative/icon-up-dir.svg"></a>
         </div>
 
         <div class="templates-wrapper">
@@ -108,7 +108,7 @@
             <ul class="template-list">
               <li class="template-item">
                 <article>
-                  <div>
+                  <div class="product-card">
                     <div class="item-img">
                       <img src="img/content/sedona.jpg" alt="Sedona" width="358" height="578">
                     </div>
@@ -120,9 +120,9 @@
                   </div>
                 </article>
               </li>
-              <li class="templates-item">
+              <li class="template-item">
                 <article>
-                  <div>
+                  <div class="product-card">
                     <div class="item-img">
                       <img src="img/content/pink.jpg" alt="PINK" width="358" height="578">
                     </div>
@@ -134,9 +134,9 @@
                   </div>
                 </article>
               </li>
-              <li class="templates-item">
+              <li class="template-item">
                 <article>
-                  <div>
+                  <div class="product-card">
                     <div class="item-img">
                       <img src="img/content/barbershop.jpg" alt="Barbershop" width="358" height="578">
                     </div>
@@ -148,9 +148,9 @@
                   </div>
                 </article>
               </li>
-              <li class="templates-item">
+              <li class="template-item">
                 <article>
-                  <div>
+                  <div class="product-card">
                     <div class="item-img">
                       <img src="img/content/mishka.jpg" alt="Mishka" width="358" height="578">
                     </div>
@@ -162,9 +162,9 @@
                   </div>
                 </article>
               </li>
-              <li class="templates-item">
+              <li class="template-item">
                 <article>
-                  <div>
+                  <div class="product-card">
                     <div class="item-img">
                       <img src="img/content/aplus.jpg" alt="A PLUS" width="358" height="578">
                     </div>
@@ -176,9 +176,9 @@
                   </div>
                 </article>
               </li>
-              <li class="templates-item">
+              <li class="template-item">
                 <article>
-                  <div>
+                  <div class="product-card">
                     <div class="item-img">
                       <img src="img/content/kvast.jpg" alt="КВАСТ" width="358" height="578">
                     </div>
@@ -195,7 +195,7 @@
               <li class="page-button"><a>1</a></li>
               <li class="page-button"><a href="#">2</a></li>
               <li class="page-button"><a href="#">3</a></li>
-              <li class="grey-button"><a href="#">Следующая</a></li>
+              <li class="page-button"><a href="#">Следующая</a></li>
             </ul>
           </section>
         </div>
@@ -207,11 +207,11 @@
     <footer class="main-footer">
       <section>
         <h2>Контакты</h2>
-        <div class="footer-map-contacts">
+        <div class="footer-map">
           <div class="footer-contact">
-            <p>NЁRDS DESIGN STUDIO</p>
-            <address>191186 Санкт-Петербруг, ул. Б.Конюшенная, д.19/8</address>
-            <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+            <span>NЁRDS DESIGN STUDIO</span>
+            <p><address class="address">191186 Санкт-Петербруг, ул. Б.Конюшенная, д.19/8</address></p>
+            <p><a class="phone-number" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
             <p><a class="red-button" href="#">Напишите нам</a></p>
           </div>
           <img src="img/content/map-marker.png" alt="маркер местоположения" width="231" height="190">
@@ -226,7 +226,7 @@
           <li class="social-item"><a href="#"><img src="img/content/instagram.svg" alt="Instagram" width="21" height="21"></a></li>
         </ul>
         <div class="discount-wrapper">
-          <p class="discount-proposal">Давайте дружить, это выгодно!</p>
+          <span>Давайте дружить, это выгодно!</span>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </section>
@@ -245,7 +245,7 @@
         </p>
         <div>
           <p>Текст письма:</p>
-          <p><textarea name="message" rows="5" placeholder="В свободной форме"></textarea></p>
+          <p><textarea class="message-area" name="message" rows="5" placeholder="В свободной форме"></textarea></p>
         </div>
         <button class="red-button" type="submit">Отправить</button>
       </form>
