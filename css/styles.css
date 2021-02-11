@@ -1,33 +1,35 @@
 /* Variables */
 
 :root {
- --primary-light: #FFFFFF;
- --secondary-light: #eeeeee;
- --primary-dark: #283136;
- --secondary-dark: #000000;
- --color-light-grey: #A6A6A6;
- --color-grey: #666666;
- --color-dark-grey: #444444;
- --socials: #E1E1E1;
- --page-button-border: #DBDBDB;
- --form-quiet: #D7DCDE;
- --form-hover: #B4B9BB;
- --color-grey-hover: #DFDFDF;
- --color-grey-click: #D5D5D5;
- --color-red: #FB565A;
- --color-red-hover: #E74246;
- --color-red-click: #D7373B;
- --color-green: #00CA74;
- --color-green-hover: #00BC6C;
- --color-green-click: #00AA62;
- --color-yellow: #EFC849;
- --color-yellow-hover: #EAB534;
- --color-yellow-click: #E5A722;
+  --primary-light: #ffffff;
+  --secondary-light: #eeeeee;
+  --primary-dark: #283136;
+  --secondary-dark: #000000;
+  --color-light-grey: #A6A6A6;
+  --color-grey: #666666;
+  --color-dark-grey: #444444;
+  --socials: #E1E1E1;
+  --page-button-border: #DBDBDB;
+  --form-quiet: #D7DCDE;
+  --form-hover: #B4B9BB;
+  --color-grey-hover: #DFDFDF;
+  --color-grey-click: #D5D5D5;
+  --color-red: #FB565A;
+  --color-red-hover: #E74246;
+  --color-red-click: #D7373B;
+  --color-green: #00CA74;
+  --color-green-hover: #00BC6C;
+  --color-green-click: #00AA62;
+  --color-yellow: #EFC849;
+  --color-yellow-hover: #EAB534;
+  --color-yellow-click: #E5A722;
+  --transparent-light: rgba(255, 255, 255, 0.3);
+  --transparent-dark: rgba(0, 0, 0, 0.3);
 }
 
 /* Global */
 
-body {
+.page-body {
   min-width: 1420px;
   margin: 0;
   padding: 0;
@@ -37,6 +39,11 @@ body {
   font-weight: 400;
   color: var(--primary-dark);
   background-color: var(--primary-light);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -48,85 +55,121 @@ img  {
   height: auto;
 }
 
+/* grid */
+.page {
+ height: 100%;
+}
+
+
+
+
 /* buttons */
 
-.red-button {
+.button {
+  font-size: 16px;
   font-family: inherit;
-  text-align: center;
-  vertical-align: middle;
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
   color: var(--primary-light);
-  background-color: var(--color-red);
   border: none;
   border-radius: 3px;
 }
 
-.red-button:hover {
-  color: var(--primary-light);
+.moreinfo-button,
+.order-redbutton,
+.writeus-button,
+.send-button,
+.show-button,
+.price-button {
+  background-color: var(--color-red);
+  font-family: inherit;
+}
+
+.moreinfo-button:hover,
+.order-redbutton:hover,
+.writeus-button:hover,
+.send-button:hover,
+.show-button:hover,
+.price-button:hover {
   background-color: var(--color-red-hover);
 }
 
-.red-button:focus {
-  color: rgba(var(--primary-light), 0.3);  /* не отображается как надо :( */
+.moreinfo-button:focus,
+.order-redbutton:focus,
+.writeus-button:focus,
+.send-button:focus,
+.show-button:focus,
+.price-button:focus {
+  color: var(--transparent-light);
   background-color: var(--color-red-click);
 }
 
-.green-button {
-  font-family: inherit;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--primary-light);
+.order-greenbutton {
   background-color: var(--color-green);
-  border: none;
-  border-radius: 3px;
 }
 
-.green-button:hover {
-  color: var(--primary-light);
+.order-greenbutton:hover {
   background-color: var(--color-green-hover);
 }
 
-.green-button:focus {
-  color: rgba(var(--primary-light), 0.3);
+.order-greenbutton:focus {
+  color: var(--transparent-light);
   background-color: var(--color-green-click);
 }
 
-.yellow-button {
-  font-family: inherit;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--primary-light);
+.order-yellowbutton {
   background-color: var(--color-yellow);
-  border: none;
-  border-radius: 3px;
 }
 
-.yellow-button:hover {
-  color: var(--primary-light);
+.order-yellowbutton:hover {
   background-color: var(--color-yellow-hover);
 }
 
-.yellow-button:focus {
-  color: rgba(var(--primary-light), 0.3);
+.order-yellowbutton:focus {
+  color: var(--transparent-light);
   background-color: var(--color-yellow-click);
+}
+
+.page-button {
+  color: var(--secondary-dark);
+  background-color: var(--secondary-light);
+}
+
+.page-button:hover {
+  background-color: var(--color-grey-hover);
+}
+
+.page-button:focus {
+  background-color: var(--color-grey-click);
+}
+
+.page-button:active {
+  background-color: var(--primary-light);
+  border: 3px solid var(--page-button-border);
 }
 
 /* header */
 
 .main-header{
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  margin-bottom: 80px;
   background-color: var(--secondary-light);
+}
+
+.main-navigation{
+  justify-self: center;
 }
 
 .site-navigation {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.basket {
+  justify-self: end;
 }
 
 .site-navigation a,
@@ -144,7 +187,7 @@ img  {
 
 .main-navigation a:focus,
 .basket a:focus {
-  color: rgba(var(--secondary-dark), 0.3);
+  color: var(--transparent-dark);
 }
 
 .main-navigation a:active,
@@ -153,8 +196,32 @@ img  {
   border-bottom: 2px solid var(--color-red);
 }
 
+.icon {
+  width: 160px;
+  height: 66px;
+  background: url(../img/content/logo-sprite.svg) no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+.icon:focus {
+  background-position: bottom;
+}
+
 /* main */
-   /* slider */
+/* slider */
+
+.wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+}
+
+.slider {
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
+  outline-offset: -5px;
+}
 
 .slider-slogan {
   font-size: 55px;
@@ -166,7 +233,12 @@ img  {
    /* services */
 
 .services {
+  display: grid;
   text-align: center;
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
+  outline-offset: -5px;
+  margin-bottom: 121px;
+  margin-top: 80px;
 }
 
 .services-list {
@@ -182,6 +254,15 @@ img  {
 }
 
    /* about us */
+
+.about-us {
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
+  outline-offset: -5px;
+}
+
+.about-us-left h2 {
+  display: none;
+}
 
 .introduction {
   font-size: 45px;
@@ -239,6 +320,11 @@ img  {
   line-height: 18px;
 }
 
+.our-partners {
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
+  outline-offset: -5px;
+}
+
 .partners-list {
   list-style: none;
 }
@@ -283,18 +369,20 @@ img  {
   list-style: none;
 }
 
-/*
-.circle {
-  background: var(--secondary-light);
-  clip-path: circle(50%);
-  height: 81px;
-  width: 81px;
-} */
-
+.social-item {
+  display: inline-flex;  /* здесь почему-то они выстроились один над другим */
+  align-items: center;
+	justify-content: center;
+	height: 81px;
+	width: 81px;
+	background-color: var(--socials);
+	border-radius: 50%;
+  margin: 9px;
+}
 
 /* catalog.html */
 
-  /* header */
+/* header */
 
 .title-wrapper h1 {
   font-size: 55px;
@@ -346,17 +434,6 @@ img  {
   line-height: 19px;
 }
 
-.show-button {
-  font-family: inherit;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  background-color: var(--secondary-light);
-  color: var(--secondary-dark);
-  border: none;
-  border-radius: 3px;
-}
-
 .template-list {
   list-style: none;
 }
@@ -385,7 +462,7 @@ img  {
 }
 
 .desc-box a:focus {
-  color: rgba(var(--secondary-dark), 0.3)
+  color:var(--transparent-dark);
 }
 
 .desc-box p {
@@ -395,29 +472,6 @@ img  {
 
 .pagination {
   list-style: none;
-}
-
-.page-button a {
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--secondary-dark);
-  background-color: var(--secondary-light);
-  border:none;
-  border-radius: 3px;
-}
-
-.page-button a:hover {
-  background-color: var(--color-grey-hover);
-}
-
-.page-button a:focus {
-  background-color: var(--color-grey-click);
-}
-
-.page-button a:active {
-  background-color: var(--primary-light);
-  border: 3px solid var(--page-button-border);
 }
 
 /* feedback form */
