@@ -27,7 +27,7 @@
   --transparent-dark: rgba(0, 0, 0, 0.3);
 }
 
-/* Global */
+/*-------------Global-------------*/
 
 .page-body {
   min-width: 1420px;
@@ -39,7 +39,6 @@
   font-weight: 400;
   color: var(--primary-dark);
   background-color: var(--primary-light);
-
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -55,15 +54,11 @@ img  {
   height: auto;
 }
 
-/* grid */
 .page {
- height: 100%;
+  height: 100%;
 }
 
-
-
-
-/* buttons */
+/*-------------buttons-------------*/
 
 .button {
   font-size: 16px;
@@ -74,6 +69,7 @@ img  {
   color: var(--primary-light);
   border: none;
   border-radius: 3px;
+  padding: 17px 54px;
 }
 
 .moreinfo-button,
@@ -149,27 +145,27 @@ img  {
   border: 3px solid var(--page-button-border);
 }
 
-/* header */
+/*-------------header-------------*/
 
 .main-header{
-  display: grid;
-  grid-template-columns: auto 2fr 1fr;
   margin-bottom: 80px;
   background-color: var(--secondary-light);
+  margin: 0;
+  padding: 0 10px;
+  height: 545px;;
+}
+
+.main-header-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 1160px;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 .main-navigation{
+  width: 437px;
   justify-self: center;
-}
-
-.site-navigation {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.basket {
-  justify-self: end;
 }
 
 .site-navigation a,
@@ -178,6 +174,21 @@ img  {
   font-weight: 500;
   text-transform: uppercase;
   color: var(--secondary-dark);
+}
+
+.site-navigation {
+  width: auto;
+  list-style: none;
+  margin: 75px 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 45px;
+}
+
+.basket {
+  justify-self: end;
+  margin: 75px 0 0 0;
 }
 
 .main-navigation a:hover,
@@ -196,56 +207,76 @@ img  {
   border-bottom: 2px solid var(--color-red);
 }
 
+.main-header-logo {
+  margin: 0;
+  padding: 0;
+}
+
 .icon {
   width: 160px;
   height: 66px;
   background: url(../img/content/logo-sprite.svg) no-repeat;
-  background-size: cover;
-  display: inline-block;
+  position: relative;
+  margin-top: 49px;
 }
 
 .icon:focus {
   background-position: bottom;
 }
 
-/* main */
-/* slider */
+/*-------------main-------------*/
 
 .wrapper {
-  width: 1160px;
+  width: 1157px;
   margin: 0 auto;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
 }
 
-.slider {
-  outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px;
+.wrapper h1 {
+  display: none;
 }
+
+/*-------------slider-------------*/
 
 .slider-slogan {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: var(--secondary-dark);
+  width: auto;
+  margin-bottom: 25px;
 }
 
-   /* services */
+.slider-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.slider-content p {
+  width: auto;
+  margin-bottom: 38px;
+}
+
+/*-------------services-------------*/
 
 .services {
-  display: grid;
-  text-align: center;
-  outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px;
+  text-align: left;
   margin-bottom: 121px;
-  margin-top: 80px;
+}
+
+.services h2 {
+  display: none;
 }
 
 .services-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
 }
 
 .services-list h3 {
+  margin: 25px 0 16px 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -253,22 +284,44 @@ img  {
   color: var(--secondary-dark);
 }
 
-   /* about us */
+.services-item {
+  width: 300px;
+  margin-right: 100px;
+  margin-top: 80px;
+}
+
+.services-item:nth-child(3n+3) {
+  margin-right: 60px;
+}
+
+.services-item p {
+  margin-bottom: 32px;
+  width: 260px;
+  padding: 0;
+}
+
+/*-------------about us left-------------*/
 
 .about-us {
-  outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 136px;
 }
 
 .about-us-left h2 {
   display: none;
 }
 
-.introduction {
+.about-us-intro {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
   color: var(--secondary-dark);
+  margin-bottom: 32px;
+}
+
+.about-us-goals {
+  width: 646px;
 }
 
 .options {
@@ -280,24 +333,26 @@ img  {
  list-style: none;
 }
 
-/*
-.options-list li {
-  list-style-image: url(../img/decorative/red-line.svg);    тут я попробовала сделать красные черточки, взяв код с рандомного сайта, и второй пример выглядит как надо, но я хз почему
-  list-style-position: inside;
-}
+/*-------------about us right-------------*/
 
-/*.options-list li{
-  padding-left: 36px;
-  background-image: url(../img/decorative/red-line.svg);
-  background-position: 0 0;
-  background-size: 1.6rem 1.6rem;
-  background-repeat: no-repeat;
-} */
+.about-us-right{
+ width: 384px;
+ height: 412px;
+}
 
 .about-us-right p {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--secondary-dark);
+}
+
+.benefits-list {
+  width: 377px;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 31px;
 }
 
 .benefits-item {
@@ -306,6 +361,7 @@ img  {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--secondary-dark);
+  margin-bottom: 10px;
 }
 
 .benefits-item span {
@@ -316,20 +372,47 @@ img  {
   color: var(--secondary-dark);
 }
 
-.benefits-list dd {
-  line-height: 18px;
+.benefits-item {
+  width: 100px;
 }
 
-.our-partners {
-  outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px;
+.benefits-list dd {
+  line-height: 18px;
+  margin: 0;
+}
+
+/*-------------partners-------------*/
+
+.our-partners h2 {
+  display: none;
 }
 
 .partners-list {
   list-style: none;
+  margin:0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-/* footer */
+.partners-item{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-------------footer-------------*/
+
+.main-footer h2 {
+  display: none;
+}
+
+.footer-contact {
+  width: 319px;
+  height: 308px;
+  background-color: var(--primary-light);
+  top: 200px;
+}
 
 .footer-contact span {
   font-size: 18px;
@@ -346,6 +429,54 @@ img  {
   color: var(--color-grey);
 }
 
+.map-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+/*-------------socials-------------*/
+
+.footer-social h2 {
+  display: none;
+}
+
+.footer-social {
+ display: grid;
+ grid-template-columns: 1fr 3fr;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 68px;
+ width: 1160px;
+}
+
+.social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 9px;
+  width: 261px;
+}
+
+.social-circle {
+  display: flex;
+	justify-content: center;
+  width: 261px;
+	height: 81px;
+	width: 81px;
+	background-color: var(--socials);
+	border-radius: 50%;
+}
+
+.discount-wrapper {
+  justify-self: start;
+  width: 660px;
+  margin-left: 139px;
+}
+
 .discount-wrapper span {
   font-size: 36px;
   line-height: 36px;
@@ -358,123 +489,7 @@ img  {
   color: var(--color-dark-grey);
 }
 
-.write-us h2 {
-  font-size: 45px;
-  line-height: 53px;
-  font-weight: 700;
-  color: var(--secondary-dark);
-}
-
-.social-list {
-  list-style: none;
-}
-
-.social-item {
-  display: inline-flex;  /* здесь почему-то они выстроились один над другим */
-  align-items: center;
-	justify-content: center;
-	height: 81px;
-	width: 81px;
-	background-color: var(--socials);
-	border-radius: 50%;
-  margin: 9px;
-}
-
-/* catalog.html */
-
-/* header */
-
-.title-wrapper h1 {
-  font-size: 55px;
-  line-height: 55px;
-  font-weight: 500;
-  color: var(--secondary-dark);
-  text-align: center;
-}
-
-/* filter*/
-
-.sorting-list {
-  list-style: none;
-}
-
-.sorting-list a:focus {
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: var(--secondary-dark);
-}
-
-.sorting-list a {
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: var(--secondary-dark);
-}
-
-.sorting span {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--secondary-dark);
-}
-
-.filter-wrapper legend {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--secondary-dark);
-}
-
-.grid-list,
-.features-list {
-  list-style: none;
-  line-height: 19px;
-}
-
-.template-list {
-  list-style: none;
-}
-
-.desc-box {
-  display: none;
-  background-color: var(--secondary-light);
-  text-align: center;
-}
-
-.product-card:hover .desc-box{
-  display: block;
-  background-color: var(--secondary-light);
-  text-align: center;
-}  /* ээээ не уверена, что это надо было делать, но сделала */
-
-.desc-box a {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
-  color: var(--secondary-dark);
-}
-
-.desc-box a:hover {
-  color: var(--color-red);
-}
-
-.desc-box a:focus {
-  color:var(--transparent-dark);
-}
-
-.desc-box p {
-  line-height: 18px;
-  color: var(--color-grey);
-}
-
-.pagination {
-  list-style: none;
-}
-
-/* feedback form */
+/*-------------feedback form-------------*/
 
 .feedback-form p {
   line-height: 18px;
@@ -483,15 +498,31 @@ img  {
 
 .feedback-form input[type="text"],
 .feedback-form input[type="email"]{
-border: 2px solid var(--form-quiet);
-color: var(--form-quiet);
-border-radius: 3px;
+  border: 2px solid var(--form-quiet);
+  color: var(--form-quiet);
+  border-radius: 3px;
+}
+
+.name-form {
+  float: left;
+  width: 360px;
+}
+
+.email-form {
+  float: right;
+  width: 360px;
+  margin-bottom: 34px;
+}
+.text-form {
+  clear: both;
 }
 
 .message-area {
-border: 2px solid var(--form-quiet);
-border-radius: 3px;
-resize: none;
+  border: 2px solid var(--form-quiet);
+  border-radius: 3px;
+  resize: none;
+  width: 760px;
+  height: 145px;
 }
 
 .message-area:hover{
@@ -522,6 +553,177 @@ color: var(--form-hover);
   border-radius: 3px;
   color: var(--color-red-hover);
 }
+
+.write-us {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.write-us h2 {
+  font-size: 45px;
+  line-height: 53px;
+  font-weight: 700;
+  color: var(--secondary-dark);
+}
+
+.write-us-container {
+  width: 761px;
+  height: 444px;
+  margin:  62px 100px 84px 100px;
+}
+
+/*-------------catalog.html-------------*/
+
+/*-------------header-------------*/
+.title-wrapper {
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
+  grid-column: 1/4;
+  justify-self: center;
+}
+
+.title-wrapper h1 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--secondary-dark);
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
+}
+
+/*-------------filter-------------*/
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  width: 1160px;
+}
+
+.filter-title {
+  display: none;
+}
+
+.filter-wrapper {
+  width: 260px;
+  height: 780px;
+  outline: 5px solid rgba(98, 0, 255, 0.938);
+  offset: -5px;
+}
+
+.filter-wrapper legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+/*-------------sorting-------------*/
+
+.sorting {
+  outline: 5px solid rgba(0, 255, 13, 0.938);
+  margin-bottom: 51px;
+}
+
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-list a:focus {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+.sorting-list a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+.sorting span {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+/*-------------grid-------------*/
+
+.grid-list,
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 19px;
+}
+
+/*-------------templates-------------*/
+
+.templates-wrapper {
+  outline: 5px solid rgba(0, 255, 255, 0.877);
+  width: auto;
+  margin-left: 140px;
+}
+
+.templates-title {
+  display: none;
+}
+
+.templates-list {
+  list-style: none;
+}
+
+.templates-list h3 {
+ display: none;
+}
+
+.templates-item {
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
+  width: 360px;
+  height: 620px;
+  margin: 0;
+}
+
+.desc-box {
+  display: none;
+  background-color: var(--secondary-light);
+  text-align: center;
+}
+
+.product-card:hover .desc-box{
+  display: block;
+  background-color: var(--secondary-light);
+  text-align: center;
+}
+
+.desc-box a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--secondary-dark);
+}
+
+.desc-box a:hover {
+  color: var(--color-red);
+}
+
+.desc-box a:focus {
+  color:var(--transparent-dark);
+}
+
+.desc-box p {
+  line-height: 18px;
+  color: var(--color-grey);
+}
+
+.pagination {
+  list-style: none;
+}
+
 
 
 
