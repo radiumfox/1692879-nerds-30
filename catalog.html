@@ -13,13 +13,12 @@
     <link rel="stylesheet" href="normalize.css">
   </head>
 
-  <body class="page-body inner-page">
+  <body class="page-body">
 
     <header class="main-header">
       <div class="main-header-content">
-        <a href="index.html" class="main-header-logo">
+        <a href="index.html" class="nerds-logo">
           <div class="icon"></div>
-          <!--<img src="img/content/nerds-logo.svg" alt="Нёрдс" width="160" height="65"> -->
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
@@ -40,10 +39,10 @@
 
       <div class="content-wrapper">
 
-        <div class="filter-wrapper visually-hidden">
+        <div class="filter-wrapper"> <!-- тут нужен див?хд -->
           <section>
             <h2 class="visually-hidden">Фильтр готовых шаблонов</h2>
-            <form method="GET" action="https://echo.htmlacademy.ru">
+            <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
 
               <fieldset class="price-filter">
                 <legend>Стоимость:</legend>
@@ -94,7 +93,6 @@
 
         <div class="templates-wrapper">
           <div class="sorting">
-            <div class="container">
             <span>Сортировать:</span>
             <ul class="sorting-list">
               <li class="sorting-item"><a href="#">По цене</a></li>
@@ -105,11 +103,7 @@
               <a class="down" href="#"><img src="img/decorative/icon-down-dir.svg"></a>
               <a class="up" href="#"><img src="img/decorative/icon-up-dir.svg"></a>
             </div>
-            </div>
-
           </div>
-
-
 
           <section>
             <h2 class="templates-title visually-hidden">Список шаблонов</h2>
@@ -253,23 +247,25 @@
     </footer>
 
     <section class="write-us">
-      <h2>Напишите нам</h2>
-      <form class="feedback-form" action="#" method="post">
-        <p>
-          <label for="appointment-name">Ваше имя:</label>
-          <input id="appointment-name" type="text" name="login" placeholder="Имя Фамилия" pattern="[a-zA-Zа-яА-ЯЁё][a-zA-Zа-яА-ЯЁё ]+">
-        </p>
-        <p>
-          <label for="appointment-email">Ваш e-mail:</label>
-          <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
-        </p>
-        <div>
-          <p>Текст письма:</p>
-          <p><textarea class="message-area" name="message" rows="5" placeholder="В свободной форме"></textarea></p>
-        </div>
-        <button class="button send-button" type="submit">Отправить</button>
-      </form>
-      <button class="button close-button" type="button">Закрыть</button>
+      <div class="write-us-container">
+        <h2>Напишите нам</h2>
+        <form class="feedback-form" action="#" method="post">
+          <p class="name-form">
+            <label for="appointment-name">Ваше имя:</label>
+            <input id="appointment-name" type="text" name="login" placeholder="Имя Фамилия" pattern="[a-zA-Zа-яА-ЯЁё][a-zA-Zа-яА-ЯЁё ]+">
+          </p>
+          <p class="email-form">
+            <label for="appointment-email">Ваш e-mail:</label>
+            <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
+          </p>
+          <div class="text-form">
+            <p>Текст письма:</p>
+            <p><textarea class="message-area" name="message" rows="5" placeholder="В свободной форме"></textarea></p>
+          </div>
+          <button class="button send-button" type="submit">Отправить</button>
+        </form>
+        <button class="button close-button" type="button">Закрыть</button>
+      </div>
     </section>
 
   </body>
