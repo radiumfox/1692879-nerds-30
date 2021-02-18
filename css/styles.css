@@ -181,16 +181,17 @@ img {
 }
 
 .main-header-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
   width: 1160px;
   margin: 0 auto;
 }
 
 .nerds-logo {
   margin-top: 49px;
-  margin-right: 202px;
   height: 66px;
+  margin-right:
 }
 
 .icon {
@@ -205,7 +206,6 @@ img {
 }
 
 .main-navigation{
-  width: 437px;
   margin-top: 75px;
 }
 
@@ -213,9 +213,9 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
   column-gap: 45px;
+  flex-wrap: wrap;
 }
 
 .site-navigation a,
@@ -230,6 +230,7 @@ img {
 .basket {
   justify-self: end;
   margin-top: 75px;
+
 }
 
 .main-navigation a:hover,
@@ -263,8 +264,7 @@ img {
 }
 
 .slider-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
 }
 
 .slider-slogan {
@@ -291,9 +291,9 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  column-gap: 100px;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .services-list h3 {
@@ -325,15 +325,25 @@ img {
 /*-------------about us left-------------*/
 
 .about-us {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
   column-gap: 120px;
   margin-bottom: 136px;
+  outline: 5px solid #D7373B;
+}
+
+.about-us-right {
+  outline: 5px solid #D7373B;
+}
+
+.about-us-left {
+  outline: 5px solid #D7373B;
 }
 
 .about-us-right img {
   display: block;
+  width: 100%;
   margin: 0 auto 37px;
+  outline: 5px solid #D7373B;
 }
 
 .about-us-intro {
@@ -346,15 +356,22 @@ img {
 
 .about-us-goals {
   width: 646px;
+  margin-bottom: 40px;
 }
 
 .options {
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 23px;
 }
 
 .options-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+  outline: 5px solid #D7373B;
 }
 
 /*-------------about us right-------------*/
@@ -370,9 +387,11 @@ img {
   width: 377px;
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  column-gap: 21px;
   margin-top: 31px;
+  margin-left: 7px;
+  outline: 5px solid #D7373B;
 }
 
 .benefits-item {
@@ -382,6 +401,9 @@ img {
   text-transform: uppercase;
   color: var(--secondary-dark);
   margin-bottom: 10px;
+  height: 64px;
+  width: 100px;
+  outline: 5px solid #D7373B;
 }
 
 .benefits-item span {
@@ -390,10 +412,6 @@ img {
   font-weight: 700;
   vertical-align: text-top;
   color: var(--secondary-dark);
-}
-
-.benefits-item {
-  width: 100px;
 }
 
 .benefits-list dd {
@@ -411,16 +429,20 @@ img {
   list-style: none;
   margin:0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
+  outline: 5px solid #D7373B;
 }
 
 .partners-item {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  outline: 5px solid #D7373B;
 }
+
 
 .partners-item:nth-child(n+5) {
   margin-top: 30px;
@@ -475,13 +497,8 @@ img {
 }
 
 .map-image {
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  clear: both;
-  grid-column-start: 1;
-  grid-column-end: -1;
-  display: block;
   background-color: var(--header-background);
   width: 1440px;
   height: 416px;
@@ -490,8 +507,7 @@ img {
 /*-------------socials-------------*/
 
 .footer-social {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
   column-gap: 139px;
   margin-left: auto;
   margin-right: auto;
@@ -502,14 +518,10 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
   column-gap: 9px;
-  width: 261px;
-}
-
-.social-item:nth-child(n+4) {
-  margin-top: 9px;
 }
 
 .vk-icon {
@@ -542,9 +554,8 @@ img {
   background-color: var(--color-red-click);
 }
 
-
 .discount-wrapper {
-  width: 660px;
+  max-width: 660px;
 }
 
 .discount-wrapper span {
