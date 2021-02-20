@@ -54,13 +54,13 @@
                 <legend>Сетка:</legend>
                 <ul class="grid-list">
                   <li class="grid-item">
-                    <label><input type="radio" name="grid" value="0" checked>Адаптиваная</label>
+                    <label><input class="filter-input-radio" type="radio" name="grid" value="0" checked>Адаптиваная</label>
                   </li>
                   <li class="grid-item">
-                    <label><input type="radio" name="grid" value="1">Фиксированная</label>
+                    <label><input class="filter-input-radio" type="radio" name="grid" value="1">Фиксированная</label>
                   </li>
                   <li class="grid-item">
-                    <label><input type="radio" name="grid" value="2">Резиновая</label>
+                    <label><input class="filter-input-radio" type="radio" name="grid" value="2">Резиновая</label>
                   </li>
                 </ul>
               </fieldset>
@@ -69,19 +69,19 @@
                 <legend>Особенности:</legend>
                 <ul class="features-list">
                   <li class="features-item">
-                    <label><input type="checkbox" name="features" value="slider" checked>Слайдер</label>
+                    <label><input class="filter-input-checkbox" type="checkbox" name="features" value="slider" checked>Слайдер</label>
                   </li>
                   <li class="features-item">
-                    <label><input type="checkbox" name="features" value="advantages-block">Блок преимуществ</label>
+                    <label><input class="filter-input-checkbox" type="checkbox" name="features" value="advantages-block">Блок преимуществ</label>
                   </li>
                   <li class="features-item">
-                    <label><input type="checkbox" name="features" value="news" checked>Новости</label>
+                    <label><input class="filter-input-checkbox" type="checkbox" name="features" value="news" checked>Новости</label>
                   </li>
                   <li class="features-item">
-                    <label><input type="checkbox" name="features" value="gallery">Галерея</label>
+                    <label><input class="filter-input-checkbox" type="checkbox" name="features" value="gallery">Галерея</label>
                   </li>
                   <li class="features-item">
-                    <label><input type="checkbox" name="features" value="basket">Корзина</label>
+                    <label><input class="filter-input-checkbox" type="checkbox" name="features" value="basket">Корзина</label>
                   </li>
                 </ul>
               </fieldset>
@@ -221,26 +221,30 @@
     <footer class="main-footer">
       <section>
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="footer-map">
-          <div class="footer-contact">
-            <span>NЁRDS DESIGN STUDIO</span>
-            <p><address class="address">191186 Санкт-Петербруг, ул. Б.Конюшенная, д.19/8</address></p>
-            <p><a class="phone-number" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-            <p><a class="button writeus-button" href="#">Напишите нам</a></p>
+        <div>
+          <div class="footer-map">
+            <div class="footer-contact">
+              <span>NЁRDS DESIGN STUDIO</span>
+              <div class="contacts-box">
+                <address class="address">191186 Санкт-Петербруг, ул. Б.Конюшенная, д.19/8</address>
+                <div class="phone-number"><a href="tel:+78122757575">+7 (812) 275-75-75</a></div>
+              </div>
+              <a class="button writeus-button" href="#">Напишите нам</a>
+            </div>
+            <img class="map-marker" src="img/content/map-marker.png" alt="маркер местоположения" width="231" height="190">
           </div>
-          <img class="map-marker" src="img/content/map-marker.png" alt="маркер местоположения" width="231" height="190">
           <img class="map-image" src="img/content/map.jpg" alt="карта местоположения" width="1440" height="416">
         </div>
       </section>
       <section class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
-          <li class="social-item"><a class="social-circle" href="#"><img src="img/content/vkontakte.svg" alt="Вконтакте" width="26" height="15"></a></li>
+          <li class="social-item"><a class="social-circle" href="#"><img src="img/content/vkontakte.svg" alt="Vkontakte" width="26" height="15"></a></li>
           <li class="social-item"><a class="social-circle" href="#"><img src="img/content/facebook.svg" alt="Facebook" width="12" height="22"></a></li>
           <li class="social-item"><a class="social-circle" href="#"><img src="img/content/instagram.svg" alt="Instagram" width="21" height="21"></a></li>
         </ul>
         <div class="discount-wrapper">
-          <span>Давайте дружить, это выгодно!</span>
+          <span>Давайте дружить, это выгодно! </span>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </section>
