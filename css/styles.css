@@ -473,9 +473,6 @@ img {
 
 .footer-map {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1160px;
 }
 
 .map-image {
@@ -485,23 +482,12 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 68px;
-  /*display: block;
-  margin-left: auto;
-  margin-right: auto;
-  grid-column-start: 1;
-  grid-column-end: -1;
-  display: block;
-  background-color: var(--secondary-light);
-  height: 416px;
-  min-width: 1160px;*/
 }
 
 .map-marker {
-  /*bottom: 140px;
-  left: 822px;*/
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(50%, 50%);
+  left: 50%;
+  transform: translate(8vmax, 50%);
 }
 
 .footer-contact {
@@ -512,6 +498,7 @@ img {
   height: 308px;
   padding: 49px 50px 49px 50px;
   box-sizing: border-box;
+  transform: translateX(20vmin);
 }
 
 .contacts-box {
@@ -538,10 +525,8 @@ img {
  margin-top: 16px;
 }
 
-
 .writeus-button {
   padding: 16px 44px;
-  display: block;
 }
 
 /*-------------socials-------------*/
