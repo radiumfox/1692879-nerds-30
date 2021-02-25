@@ -198,7 +198,7 @@ img {
 
 .nerds-logo:focus {
   opacity: 0.3;
- }
+}
 
 .main-navigation{
   margin-top: 75px;
@@ -210,9 +210,7 @@ img {
   margin: 0;
   padding: 0;
   display: flex;
-  column-gap: 45px;
   flex-wrap: wrap;
-
 }
 
 .site-navigation a,
@@ -224,6 +222,10 @@ img {
   text-transform: uppercase;
   color: var(--secondary-dark);
   padding-top: 10px;
+}
+
+.site-navigation a {
+  margin-left: 45px;
 }
 
 .basket {
@@ -451,12 +453,12 @@ img {
   padding: 0;
   margin: 0;
   display: flex;
-  column-gap: 22px;
   margin-top: 31px;
 }
 
 .benefits-item {
   width: min-content;
+  margin-right: 22px;
 }
 
 .benefits-item dt {
@@ -491,6 +493,7 @@ img {
   background-image: url(../img/decorative/grey-line.svg);
   background-repeat: no-repeat;
   background-position: bottom;
+  margin-bottom: 80px;
 }
 
 .partners-list {
@@ -521,8 +524,7 @@ img {
 /*-------------footer-------------*/
 
 .footer-map {
-
-   display: grid;
+  display: grid;
   grid-template-columns: auto 1160px auto;
   grid-template-rows: 54px 308px 54px;
   margin-bottom: 68px;
@@ -596,6 +598,7 @@ img {
   grid-template-columns: 261px 1fr;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 68px;
   width: 1160px;
 }
 
@@ -605,7 +608,11 @@ img {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 9px;
+  width: max-content;
+}
+
+.social-item {
+  margin-right: 9px;
 }
 
 .social-circle {
@@ -652,7 +659,8 @@ img {
 }
 
 /*-------------feedback form-------------*/
-.write-us {
+
+.modal-window {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -660,14 +668,14 @@ img {
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.write-us h2 {
+.modal-window h2 {
   font-size: 45px;
   line-height: 53px;
   font-weight: 700;
   color: var(--secondary-dark);
 }
 
-.write-us-container {
+.modal-wrapper {
   width: 761px;
   height: 443px;
   margin:  62px 100px 84px 100px;
@@ -718,7 +726,6 @@ img {
   resize: none;
   width: 728px;
   font-family: inherit;
-
   font-size: 16px;
   line-height: 18px;
   color: var(--transparent-grey);
@@ -833,8 +840,72 @@ img {
   color: var(--primary-dark-transparent);
 }
 
-.filter ul {
-  line-height: 2em;
+.grid-item,
+.features-item {
+  padding-left: 36px;
+  margin-bottom: 19px;
+}
+
+.grid-item label,
+.features-item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: -36px;
+  top: -3px;
+  opacity: 0.4;
+  background-image: url(../img/decorative/radio-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: -28px;
+  top: 5px;
+  opacity: 0.4;
+  background-image: url(../img/decorative/Oval.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: -36px;
+  top: -3px;
+  opacity: 0.4;
+  background-image: url(../img/decorative/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: -36px;
+  top: -3px;
+  opacity: 0.4;
+  background-image: url(../img/decorative/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /*-------------sorting-------------*/
@@ -851,7 +922,6 @@ img {
   padding: 0;
   display: flex;
   flex-wrap: nowrap;
-  column-gap: 25px;
   justify-self: end;
 }
 
@@ -860,6 +930,7 @@ img {
   line-height: 18px;
   text-transform: uppercase;
   color: var(--transparent-dark);
+  margin-left: 25px;
 }
 
 .sorting-list a:hover {
