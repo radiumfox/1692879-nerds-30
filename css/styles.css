@@ -214,8 +214,7 @@ img {
 }
 
 .site-navigation a,
-.basket a {
-  /*display: block;*/
+.basket-link {
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
@@ -233,7 +232,9 @@ img {
   text-align: end;
   margin-top: 75px;
   width: 115px;
+  height: 30px;
   position: relative;
+  padding-bottom: 12px;
 }
 
 .basket-link::before {
@@ -259,8 +260,13 @@ img {
 }
 
 .main-navigation a:active,
-.basket a:active {
-  padding-bottom: 12px;
+.main-navigation a.active {
+  padding-bottom: 13px;
+  border-bottom: 2px solid var(--color-red);
+}
+
+.basket:active {
+  padding-bottom: 10px;
   border-bottom: 2px solid var(--color-red);
 }
 
@@ -777,7 +783,7 @@ img {
   line-height: 55px;
   font-weight: 500;
   color: var(--secondary-dark);
-  margin: 78px 0 108px;
+  margin: 76px 0 108px;
 }
 
 /*-------------main-------------*/
@@ -786,7 +792,7 @@ img {
   display: grid;
   grid-template-areas: 'sidebar . market';
   grid-template-columns: 3fr 1fr 8fr;
-  column-gap: 141px;
+  column-gap: 70px;
   width: 1160px;
   margin-top: 55px;
   margin-bottom: 60px;
@@ -797,6 +803,7 @@ img {
 /*-------------filter-------------*/
 
 .filter-wrapper {
+  grid-area: sidebar;
   width: 260px;
 }
 
@@ -911,7 +918,7 @@ img {
 /*-------------sorting-------------*/
 
 .sorting {
-  margin-bottom: 51px;
+  margin-bottom: 45px;
   display: grid;
   grid-template-columns: min-content 1fr max-content;
 }
@@ -952,12 +959,31 @@ img {
   color: var(--secondary-dark);
 }
 
-.arrows {
-  margin-left: 47px;
+.up-arrow,
+.down-arrow {
+  fill: #A6A6A6;
+  opacity: 0.2;
 }
 
 .up-arrow {
-  margin-left: 18px;
+  padding: 0 3px 0 3px;
+  margin-left: 8px;
+}
+
+.down-arrow {
+  padding: 0 1px 0 3px;
+}
+
+.up-arrow:hover,
+.down-arrow:hover {
+  fill: #A6A6A6;
+  opacity: 1;
+}
+
+.up-arrow:focus:active,
+.down-arrow:focus:active {
+  fill: #231F20;
+  opacity: 1;
 }
 
 /*-------------grid-------------*/
@@ -972,13 +998,18 @@ img {
 
 /*-------------templates-------------*/
 
+.templates-wrapper {
+  grid-area: market;
+}
+
 .templates-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 41px;
+  column-gap: 41px;
+  row-gap: 30px;
 }
 
 .templates-item {
@@ -987,12 +1018,11 @@ img {
   margin: 0;
   position: relative;
   background-color: var(--templates-bg);
-  background-image: url(../img/decorative/browser-normal.png);
+  background-image: url(../img/decorative/browser-quiet.png);
   background-position: top;
   background-repeat: no-repeat;
   padding-top: 40px;
   border: 1px solid var(--transparent-dark2);
-
   border-radius: 5px;
   /* как сделать, чтоб карточка тоже изменяла размер при изменении размера desc-box'а?  */
 }
@@ -1009,7 +1039,7 @@ img {
   background-color: var(--secondary-light);
   text-align: center;
   position:absolute;
-  top: 389px;
+  top: 390px;
   width: 358px;
   height: max-content;
   z-index: 1;
@@ -1033,7 +1063,7 @@ img {
   color: var(--secondary-dark);
 }
 
-.product-card:hover .desc-box{
+.templates-item:hover .desc-box{
   display: block;
   background-color: var(--secondary-light);
   text-align: center;
@@ -1063,41 +1093,6 @@ img {
   margin: 0;
   margin-top: 55px;
 }
-
-/*.pagination-item + .pagination-item {
-  margin-left: 11px;
-}
-
-.pagination-item a {
-  display: inline-block;
-  font-family: inherit;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--secondary-dark);
-  background-color: var(--secondary-light);
-  border: 3px solid rgba(0, 0, 0, 0);
-  border-radius: 3px;
-  padding: 16px 20px;
-}
-
-.pagination-item a:hover {
-  background-color: var(--color-grey-hover);
-}
-
-.pagination-item a:focus {
-  background-color: var(--color-grey-click);
-  color: var(--transparent-dark);
-  box-shadow: 0 -3px var(--transparent-dark2);
-}
-
-.pagination-item a:active {
-  background-color: var(--primary-light);
-  border: 3px solid var(--page-button-border);
-}
-
-*/
-
 
 .pagination-item a {
   display: inline-block;
