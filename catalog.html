@@ -27,8 +27,10 @@
             <li><a class="active" href="catalog.html">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
+          <ul class="user-navigation">
+            <li class="basket"><a class="basket-link" href="#">Корзина</a></li>
+          </ul>
         </nav>
-        <div class="basket"><a class="basket-link" href="#">Корзина</a></div>
       </div>
       <div class="title-wrapper">
         <h1>Магазин готовых шаблонов</h1>
@@ -39,63 +41,61 @@
 
       <div class="content-wrapper">
 
-        <div class="filter-wrapper"> <!-- тут нужен див?хд -->
-          <section>
-            <h2 class="visually-hidden">Фильтр готовых шаблонов</h2>
-            <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
+        <section class="filter-wrapper">
+          <h2 class="visually-hidden">Фильтр готовых шаблонов</h2>
+          <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
 
-              <fieldset class="price-filter">
-                <legend>Стоимость:</legend>
-                <input type="range" name="price" id="filter-price" min="0" max="15000" value="12000">
-                <span>от <input type="number" min="0" max="15000"> до <input type="number" min="0" max="15000"></span>
-              </fieldset>
+            <fieldset class="price-filter">
+              <legend>Стоимость:</legend>
+              <input type="range" name="price" id="filter-price" min="0" max="15000" value="12000">
+              <span>от <input type="number" min="0" max="15000"> до <input type="number" min="0" max="15000"></span>
+            </fieldset>
 
-              <fieldset class="grid-filter">
-                <legend>Сетка:</legend>
-                <ul class="grid-list">
-                  <li class="grid-item">
-                    <input class="filter-input-radio visually-hidden" id="adaptive" type="radio" name="grid" value="0" checked>
-                    <label for="adaptive">Адаптиваная</label>
-                  </li>
-                  <li class="grid-item">
-                    <input class="filter-input-radio visually-hidden" id="fixed" type="radio" name="grid" value="1">
-                    <label for="fixed">Фиксированная</label>
-                  </li>
-                  <li class="grid-item">
-                    <input class="filter-input-radio visually-hidden" id="flex" type="radio" name="grid" value="2">
-                    <label for="flex">Резиновая</label>
-                  </li>
-                </ul>
-              </fieldset>
+            <fieldset class="grid-filter">
+              <legend>Сетка:</legend>
+              <ul class="grid-list">
+                <li class="grid-item">
+                  <input class="filter-input-radio visually-hidden" id="adaptive" type="radio" name="grid" value="0" checked>
+                  <label for="adaptive">Адаптиваная</label>
+                </li>
+                <li class="grid-item">
+                  <input class="filter-input-radio visually-hidden" id="fixed" type="radio" name="grid" value="1">
+                  <label for="fixed">Фиксированная</label>
+                </li>
+                <li class="grid-item">
+                  <input class="filter-input-radio visually-hidden" id="flex" type="radio" name="grid" value="2">
+                  <label for="flex">Резиновая</label>
+                </li>
+              </ul>
+            </fieldset>
 
-              <fieldset class="features-filter">
-                <legend>Особенности:</legend>
-                <ul class="features-list">
-                  <li class="features-item">
-                    <input class="filter-input-checkbox visually-hidden" id="slider" type="checkbox" name="features" value="slider" checked>
-                    <label for="slider">Слайдер</label>
-                  </li>
-                  <li class="features-item">
-                    <input class="filter-input-checkbox visually-hidden" id="advantages-block" type="checkbox" name="features" value="advantages-block">
-                    <label for="advantages-block">Блок преимуществ</label>
-                  </li>
-                  <li class="features-item">
-                    <input class="filter-input-checkbox visually-hidden" id="news" type="checkbox" name="features" value="news" checked>
-                    <label for="news">Новости</label>
-                  </li>
-                  <li class="features-item">
-                    <input class="filter-input-checkbox visually-hidden" id="gallery" type="checkbox" name="features" value="gallery"><label for="gallery">Галерея</label>
-                  </li>
-                  <li class="features-item">
-                    <input class="filter-input-checkbox visually-hidden" id="basket" type="checkbox" name="features" value="basket"><label for="basket">Корзина</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <button class="button show-button" type="submit">Показать</button>
+            <fieldset class="features-filter">
+              <legend>Особенности:</legend>
+              <ul class="features-list">
+                <li class="features-item">
+                  <input class="filter-input-checkbox visually-hidden" id="slider" type="checkbox" name="features" value="slider" checked>
+                  <label for="slider">Слайдер</label>
+                </li>
+                <li class="features-item">
+                  <input class="filter-input-checkbox visually-hidden" id="advantages-block" type="checkbox" name="features" value="advantages-block">
+                  <label for="advantages-block">Блок преимуществ</label>
+                </li>
+                <li class="features-item">
+                  <input class="filter-input-checkbox visually-hidden" id="news" type="checkbox" name="features" value="news" checked>
+                  <label for="news">Новости</label>
+                </li>
+                <li class="features-item">
+                  <input class="filter-input-checkbox visually-hidden" id="gallery" type="checkbox" name="features" value="gallery"><label for="gallery">Галерея</label>
+                </li>
+                <li class="features-item">
+                  <input class="filter-input-checkbox visually-hidden" id="basket" type="checkbox" name="features" value="basket"><label for="basket">Корзина</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button show-button" type="submit">Показать</button>
 
-            </form>
-          </section>
-        </div>
+          </form>
+        </section>
 
         <div class="templates-wrapper">
           <div class="sorting">
@@ -238,7 +238,7 @@
               <address class="address">191186 Санкт-Петербруг, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</address>
               <div class="phone-number"><a href="tel:+78122757575">тел. +7 (812) 275-75-75</a></div>
             </div>
-            <a class="button writeus-button" href="#">Напишите нам</a>
+            <a class="button feedback-button" href="#">Напишите нам</a>
           </div>
           <img class="map-marker" src="img/content/map-marker.png" alt="маркер местоположения" width="231" height="190">
           <img class="map-image" src="img/content/map.jpg" alt="карта местоположения" width="1440" height="416">

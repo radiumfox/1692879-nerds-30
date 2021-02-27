@@ -27,37 +27,36 @@
             <li><a href="catalog.html">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
+          <ul class="user-navigation">
+            <li class="basket"><a class="basket-link" href="#">Корзина</a></li>
+          </ul>
         </nav>
-        <div class="basket"><a class="basket-link" href="#">Корзина</a></div>
       </div>
     </header>
 
     <main class="wrapper">
       <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
       <div class="slider">
-        <div class="slide active">
+        <div class="slide slide-1 active">
           <div class="slide-info">
             <p class="slide-slogan">Долго, дорого, скрупулёзно.</p>
-            <p class="slide-text">Математически выверенный дизайн для вашего сайта или мобильного приложения. </p>
-            <a class="button moreinfo-button" href="#">Узнать больше</a>
+            <p class="slide-text">Математически выверенный дизайн для&nbsp;вашего&nbsp;сайта&nbsp;или мобильного приложения. </p>
+            <a class="button more-info-button" href="#">Узнать больше</a>
           </div>
-          <img class="slide-pic" src="img/decorative/slide1.png" alt="слайд 1" width="760" height="431">
         </div>
-        <div class="slide">
+        <div class="slide slide-2">
           <div class="slide-info">
             <p class="slide-slogan">Любим математику как никто другой</p>
             <p class="slide-text">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
-            <a class="button moreinfo-button" href="#">Узнать больше</a>
+            <a class="button more-info-button" href="#">Узнать больше</a>
           </div>
-          <img class="slide-pic" src="img/decorative/slide2.png" alt="слайд 2" width="760" height="431">
         </div>
-        <div class="slide">
+        <div class="slide slide-3">
           <div class="slide-info">
             <p class="slide-slogan">Только ночь, только хардкор</p>
             <p class="slide-text">Работать днём, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-            <a class="button moreinfo-button" href="#">Узнать больше</a>
+            <a class="button more-info-button" href="#">Узнать больше</a>
           </div>
-          <img class="slide-pic" src="img/decorative/slide3.png" alt="слайд 3" width="760" height="431">
         </div>
         <ol class="slider-indicators">
           <li></li>
@@ -74,7 +73,7 @@
               <img src="img/decorative/illustration-1.jpg" alt="иллюстрация" width="300" height="146">
               <h3>Веб-сайты</h3>
               <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
-              <a class="button order-redbutton" href="#">Заказать</a>
+              <a class="button order-red-button" href="#">Заказать</a>
             </article>
           </li>
           <li class="services-item">
@@ -82,7 +81,7 @@
               <img src="img/decorative/illustration-2.jpg" alt="иллюстрация" width="300" height="146">
               <h3>Приложения</h3>
               <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-              <a class="button order-greenbutton" href="#">Заказать</a>
+              <a class="button order-green-button" href="#">Заказать</a>
             </article>
           </li>
           <li class="services-item">
@@ -90,7 +89,7 @@
               <img src="img/decorative/illustration-3.jpg" alt="иллюстрация" width="300" height="146">
               <h3>Презентации</h3>
               <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-              <a class="button order-yellowbutton" href="#">Заказать</a>
+              <a class="button order-yellow-button" href="#">Заказать</a>
             </article>
           </li>
 
@@ -100,8 +99,8 @@
       <section class="about-us">
         <div class="about-us-left">
           <h2 class="visually-hidden">О нас</h2>
-          <p class="about-us-intro">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-          <p class="about-us-goals">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы. </p>
+          <p class="intro">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+          <p class="principle">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы. </p>
           <p class="options">Выполняем заказы на разработку:</p>
           <ul class="options-list">
             <li class="options-item">Веб-сайтов любой сложности</li>
@@ -149,7 +148,7 @@
               <address class="address">191186 Санкт-Петербруг, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</address>
               <div class="phone-number"><a href="tel:+78122757575">тел. +7 (812) 275-75-75</a></div>
             </div>
-            <a class="button writeus-button" href="#">Напишите нам</a>
+            <a class="button feedback-button" href="#">Напишите нам</a>
           </div>
           <img class="map-marker" src="img/content/map-marker.png" alt="маркер местоположения" width="231" height="190">
           <img class="map-image" src="img/content/map.jpg" alt="карта местоположения" width="1440" height="416">
@@ -187,7 +186,7 @@
       </section>
     </footer>
 
-    <section class="modal-window visually-hidden">
+    <section class="modal-window">
       <div class="modal-wrapper">
         <h2>Напишите нам</h2>
         <form class="feedback-form" action="#" method="post">
