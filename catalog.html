@@ -24,7 +24,7 @@
           <ul class="site-navigation">
             <li><a href="#">Студия</a></li>
             <li><a href="#">Клиенты</a></li>
-            <li><a class="active" href="catalog.html">Магазин</a></li>
+            <li class="active"><a href="catalog.html">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
           <ul class="user-navigation">
@@ -45,10 +45,20 @@
           <h2 class="visually-hidden">Фильтр готовых шаблонов</h2>
           <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
 
-            <fieldset class="price-filter">
+            <fieldset class="range-filter">
               <legend>Стоимость:</legend>
-              <input type="range" name="price" id="filter-price" min="0" max="15000" value="12000">
-              <span>от <input type="number" min="0" max="15000"> до <input type="number" min="0" max="15000"></span>
+              <!--<input type="range" name="price" id="price-filter" min="0" max="15000" value="12000">-->
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="number" name="min-price" value="0" min="0"  max="15000"></label>
+                <label class="max-proce">до <input type="number" name="max-price" value="15000" min="0" max="15000"></label>
+              </div>
             </fieldset>
 
             <fieldset class="grid-filter">
@@ -56,7 +66,7 @@
               <ul class="grid-list">
                 <li class="grid-item">
                   <input class="filter-input-radio visually-hidden" id="adaptive" type="radio" name="grid" value="0" checked>
-                  <label for="adaptive">Адаптиваная</label>
+                  <label for="adaptive">Адаптивная</label>
                 </li>
                 <li class="grid-item">
                   <input class="filter-input-radio visually-hidden" id="fixed" type="radio" name="grid" value="1">
