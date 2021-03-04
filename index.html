@@ -16,9 +16,9 @@
   <body class="page-body">
 
     <header class="main-header">
-      <div class="main-header-content">
+      <div class="main-header-container">
         <a class="nerds-logo">
-          <img src="img/content/nerds-logo.png" alt="Логотип NЁRDS">
+          <img src="img/content/nerds-logo.png" width="159" height="65" alt="Логотип NЁRDS">
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
@@ -42,7 +42,7 @@
           <li class="slide slide-1 active">
             <div class="slide-info">
               <p class="slide-slogan">Долго, дорого, скрупулезно.</p>
-              <p class="slide-text">Математически выверенный дизайн для&nbsp;вашего&nbsp;сайта&nbsp;или мобильного приложения. </p>
+              <p class="slide-text">Математически выверенный дизайн для&nbsp;вашего&nbsp;сайта&nbsp;или мобильного приложения.</p>
               <a class="button more-info-button" href="#">Узнать больше</a>
             </div>
           </li>
@@ -55,7 +55,7 @@
           </li>
           <li class="slide slide-3">
             <div class="slide-info">
-              <p class="slide-slogan">Только ночь, только хардкор</p>
+              <p class="slide-slogan">Только ночь, только&nbsp;хардкор</p>
               <p class="slide-text">Работать днём, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
               <a class="button more-info-button" href="#">Узнать больше</a>
             </div>
@@ -95,7 +95,6 @@
               <a class="button order-yellow-button" href="#">Заказать</a>
             </article>
           </li>
-
         </ul>
       </section>
 
@@ -103,7 +102,7 @@
         <div class="about-us-left">
           <h2 class="visually-hidden">О нас</h2>
           <p class="intro">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-          <p class="principle">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы. </p>
+          <p class="principle">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
           <p class="options">Выполняем заказы на разработку:</p>
           <ul class="options-list">
             <li class="options-item">Веб-сайтов любой сложности</li>
@@ -137,6 +136,7 @@
           <li class="partners-item"><a href="#"><img src="img/content/barbershop_logo.png" alt="Barbershop Borodinski" width="209" height="90"></a></li>
           <li class="partners-item"><a href="#"><img src="img/content/pink_logo.png" alt="PINK" width="185" height="52"></a></li>
           <li class="partners-item"><a href="#"><img src="img/content/mishka_logo.png" alt="Mishka" width="173" height="84"></a></li>
+
         </ul>
       </section>
     </main>
@@ -148,7 +148,7 @@
           <div class="footer-contact">
             <span>NЁRDS DESIGN STUDIO</span>
             <div class="contacts-box">
-              <address class="address">191186 Санкт-Петербруг, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</address>
+              <address class="address">191186, Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</address>
               <div class="phone-number"><a href="tel:+78122757575">тел. +7 (812) 275-75-75</a></div>
             </div>
             <a class="button feedback-button" href="#">Напишите нам</a>
@@ -189,17 +189,17 @@
       </section>
     </footer>
 
-    <section class="modal-window visually-hidden">
+    <section class="modal-window">
       <div class="modal-wrapper">
         <h2>Напишите нам</h2>
         <form class="feedback-form" action="#" method="post">
           <div class="form name-form">
             <label for="appointment-name">Ваше имя:</label>
-            <input id="appointment-name" type="text" name="login" placeholder="Имя Фамилия" pattern="[a-zA-Zа-яА-ЯЁё][a-zA-Zа-яА-ЯЁё ]+">
+            <input class="type-name" id="appointment-name" type="text" name="login" placeholder="Имя Фамилия" pattern="[a-zA-Zа-яА-ЯЁё][a-zA-Zа-яА-ЯЁё ]+">
           </div>
           <div class="form email-form">
             <label for="appointment-email">Ваш email:</label>
-            <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
+            <input class="type-email" id="appointment-email" type="email" name="email" placeholder="email@example.com">
           </div>
           <div class="text-form">
             <span>Текст письма:</span>
@@ -207,9 +207,10 @@
           </div>
           <button class="button send-button" type="submit">Отправить</button>
         </form>
-        <div class="button-wrapper"><button class="modal-button close-button" aria-label="close" type="button"></button></div>
+        <div class="button-wrapper"><button class="modal-close" aria-label="close" type="button"></button></div>
       </div>
     </section>
+    <script src="js/feedback.js"></script>
   </body>
 
 </html>
