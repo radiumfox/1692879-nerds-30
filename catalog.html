@@ -26,7 +26,6 @@
             <li><a href="#">Клиенты</a></li>
             <li><a class="active" href="catalog.html">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
-
           </ul>
           <ul class="user-navigation">
             <li class="basket"><a class="basket-link" href="#">Корзина</a></li>
@@ -39,13 +38,10 @@
     </header>
 
     <main class="wrapper">
-
       <div class="content-wrapper">
-
         <section class="filter-wrapper">
           <h2 class="visually-hidden">Фильтр готовых шаблонов</h2>
           <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
-
             <fieldset class="range-filter">
               <legend>Стоимость:</legend>
               <!--<input type="range" name="price" id="price-filter" min="0" max="15000" value="12000">-->
@@ -61,7 +57,6 @@
                 <label class="max-proce">до <input type="number" name="max-price" value="15000" min="0" max="15000"></label>
               </div>
             </fieldset>
-
             <fieldset class="grid-filter">
               <legend>Сетка:</legend>
               <ul class="grid-list">
@@ -79,7 +74,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="features-filter">
               <legend>Особенности:</legend>
               <ul class="features-list">
@@ -104,10 +98,8 @@
               </ul>
             </fieldset>
             <button class="button show-button" type="submit">Показать</button>
-
           </form>
         </section>
-
         <div class="templates-wrapper">
           <div class="sorting">
             <span>Сортировать:</span>
@@ -125,7 +117,6 @@
               </a>
             </div>
           </div>
-
           <section>
             <h2 class="templates-title visually-hidden">Список шаблонов</h2>
             <ul class="templates-list">
@@ -234,9 +225,7 @@
             </ul>
           </section>
         </div>
-
       </div>
-
     </main>
 
    <footer class="main-footer">
@@ -294,16 +283,16 @@
         <h2>Напишите нам</h2>
         <form class="feedback-form" action="#" method="post">
           <div class="form name-form">
-            <label for="appointment-name">Ваше имя:</label>
-            <input class="type-name" id="appointment-name" type="text" name="login" placeholder="Имя Фамилия" pattern="[a-zA-Zа-яА-ЯЁё][a-zA-Zа-яА-ЯЁё ]+">
+            <label for="feedback-name">Ваше имя:</label>
+            <input class="type-name" id="feedback-name" type="text" name="login" placeholder="Имя Фамилия" pattern="[a-zA-Zа-яА-ЯЁё][a-zA-Zа-яА-ЯЁё ]+">
           </div>
           <div class="form email-form">
-            <label for="appointment-email">Ваш email:</label>
-            <input class="type-email" id="appointment-email" type="email" name="email" placeholder="email@example.com">
+            <label for="feedback-email">Ваш email:</label>
+            <input class="type-email" id="feedback-email" type="email" name="email" placeholder="email@example.com">
           </div>
           <div class="text-form">
             <span>Текст письма:</span>
-            <div><textarea class="message-area" name="message" rows="5" placeholder="В свободной форме"></textarea></div>
+            <div><textarea class="message-area" name="message" placeholder="В свободной форме"></textarea></div>
           </div>
           <button class="button send-button" type="submit">Отправить</button>
         </form>
@@ -311,6 +300,7 @@
       </div>
     </section>
     <script src="js/feedback.js"></script>
+
   </body>
 
 </html>
