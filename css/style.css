@@ -33,7 +33,7 @@
   --transparent-grey: rgba(68, 68, 68, 0.5);
 }
 
-/*-------------Global-------------*/
+/* Global */
 
 .page-body {
   font-family: "Roboto", Arial, sans-serif;
@@ -77,7 +77,7 @@ img {
   overflow: hidden;
 }
 
-/*-------------buttons-------------*/
+/* buttons */
 
 .button {
   display: inline-block;
@@ -184,7 +184,7 @@ img {
   padding: 16px 72px;
 }
 
-/*-------------header-------------*/
+/* header */
 
 .main-header {
   background-color: var(--secondary-light);
@@ -297,9 +297,9 @@ img {
   border-bottom: 2px solid var(--color-red);
 }
 
-/*-------------main-------------*/
+/* main */
 
-/*-------------slider-------------*/
+/* slider */
 
 .slider {
   background-color: var(--secondary-light);
@@ -406,7 +406,7 @@ img {
   margin-top: 12px;
 }
 
-/*-------------services-------------*/
+/* services */
 
 .services {
   width: 1160px;
@@ -464,7 +464,7 @@ img {
   width: 260px;
 }
 
-/*-------------about us left-------------*/
+/* about us left */
 
 .about-us {
   display: grid;
@@ -542,7 +542,7 @@ img {
   top: 11px;
 }
 
-/*-------------about us right-------------*/
+/* about us right */
 
 .about-us-right p {
   font-weight: 700;
@@ -593,7 +593,7 @@ img {
   margin: 0;
 }
 
-/*-------------partners-------------*/
+/* partners */
 
 .our-partners {
   width: 1160px;
@@ -662,7 +662,7 @@ img {
   margin-top: 30px;
 }
 
-/*-------------footer-------------*/
+/* footer */
 
 .footer-map {
   display: grid;
@@ -715,7 +715,7 @@ img {
   margin-top: 16px;
 }
 
-/*-------------socials-------------*/
+/* socials */
 
 .footer-social {
   display: grid;
@@ -781,7 +781,7 @@ img {
   padding: 0;
 }
 
-/*-------------feedback form-------------*/
+/* feedback form */
 
 .modal-window {
   display: none;
@@ -813,7 +813,7 @@ img {
 .modal-wrapper {
   width: 761px;
   height: 443px;
-  margin:  62px 100px 84px 100px;
+  margin:  62px 100px 84px;
 }
 
 .modal-close {
@@ -901,8 +901,7 @@ img {
   font-size: 16px;
   line-height: 18px;
   color: var(--transparent-grey);
-  margin-bottom: 47px;
-  margin-top: 9px;
+  margin: 9px 0 47px;
   padding: 16px 16px;
   box-sizing: border-box;
   height: 118px;
@@ -939,9 +938,9 @@ img {
   color: var(--color-red-hover);
 }
 
-/*-------------catalog.html-------------*/
+/* catalog */
 
-/*-------------header-------------*/
+/* header */
 
 .title-wrapper {
   display: block;
@@ -963,7 +962,7 @@ img {
   margin-bottom: 108px;
 }
 
-/*-------------main-------------*/
+/* main */
 
 .content-wrapper {
   display: grid;
@@ -974,7 +973,7 @@ img {
   margin: 56px auto 60px;
 }
 
-/*-------------filter-------------*/
+/* filter */
 
 .filter-wrapper {
   grid-area: sidebar;
@@ -1222,7 +1221,7 @@ img {
   opacity: 0.1;
 }
 
-/*-------------sorting-------------*/
+/* sorting */
 
 .sorting {
   margin-bottom: 48px;
@@ -1296,7 +1295,7 @@ img {
   opacity: 1;
 }
 
-/*-------------templates-------------*/
+/* templates */
 
 .templates-wrapper {
   grid-area: market;
@@ -1313,7 +1312,6 @@ img {
 }
 
 .product-card {
-  /*height: 578px;*/
   width: 358px;
   margin: 0;
   padding-top: 40px;
@@ -1331,7 +1329,6 @@ img {
   border-bottom-right-radius: 5px;
   display: block;
   object-fit: contain;
-  outline-offset: -2px;
 }
 
 .product-card:hover {
@@ -1350,8 +1347,10 @@ img {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding-bottom: 44px;
-  width: 100%;
+  width: 358px;
   top: 390px;
+  overflow-y: auto;
+  max-height: 188px;
 }
 
 .product-card:hover .desc-box {
@@ -1381,56 +1380,6 @@ img {
   margin: 12px auto 32px;
   width: 255px;
 }
-
-/*.desc-box {
-  display: none;
-  position: absolute;
-  background-color: var(--secondary-light);
-  text-align: center;
-  z-index: 1;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-  width: 100%;
-  bottom: 0;
-}
-
-.desc-box .container {
-  width: 255px;
-  margin: 26px auto 44px;
-}
-
-.desc-box-title {
-  margin: 0;
-  padding: 0;
-}
-
-.desc-box-title a {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--secondary-dark);
-}
-
-.product-card:hover .desc-box {
-  display: block;
-  background-color: var(--secondary-light);
-}
-
-.desc-box a:hover {
-  color: var(--color-red);
-}
-
-.desc-box a:focus {
-  color:var(--transparent-dark);
-}
-
-.desc-box p {
-  line-height: 18px;
-  color: var(--color-grey-text);
-  margin: 12px 0 32px;
-}*/
 
 .pagination {
   list-style: none;
