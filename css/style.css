@@ -184,7 +184,11 @@ img {
   padding: 16px 72px;
 }
 
+<<<<<<< HEAD:css/style.css
 /* header */
+=======
+/*-------------header-------------*/
+>>>>>>> f56c2fc5607b04948f065416f0bf051791e82ff7:css/styles.css
 
 .main-header {
   background-color: var(--secondary-light);
@@ -1312,6 +1316,10 @@ img {
 }
 
 .product-card {
+<<<<<<< HEAD:css/style.css
+=======
+  /*height: 578px;*/
+>>>>>>> f56c2fc5607b04948f065416f0bf051791e82ff7:css/styles.css
   width: 358px;
   margin: 0;
   padding-top: 40px;
@@ -1325,10 +1333,23 @@ img {
 }
 
 .item-img {
+<<<<<<< HEAD:css/style.css
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   display: block;
   object-fit: contain;
+}
+
+.product-card:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+  background-image: url(../img/decorative/browser.png);
+  background-position: top;
+  background-repeat: no-repeat;
+=======
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  object-fit: contain;
+  outline-offset: -2px;
 }
 
 .product-card:hover {
@@ -1347,10 +1368,8 @@ img {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding-bottom: 44px;
-  width: 358px;
+  width: 100%;
   top: 390px;
-  overflow-y: auto;
-  max-height: 188px;
 }
 
 .product-card:hover .desc-box {
@@ -1368,6 +1387,7 @@ img {
 
 .desc-box a:hover {
   color: var(--color-red);
+>>>>>>> f56c2fc5607b04948f065416f0bf051791e82ff7:css/styles.css
 }
 
 .desc-box a:focus {
@@ -1380,6 +1400,68 @@ img {
   margin: 12px auto 32px;
   width: 255px;
 }
+
+/*.desc-box {
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-light);
+  text-align: center;
+  z-index: 1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+<<<<<<< HEAD:css/style.css
+  padding-bottom: 44px;
+  width: 358px;
+  top: 390px;
+  overflow-y: auto;
+  max-height: 188px;
+=======
+
+  width: 100%;
+  bottom: 0;
+>>>>>>> f56c2fc5607b04948f065416f0bf051791e82ff7:css/styles.css
+}
+
+.product-card:hover .desc-box {
+  display: block;
+  background-color: var(--secondary-light);
+}
+
+.desc-box-title a {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+<<<<<<< HEAD:css/style.css
+=======
+.product-card:hover .desc-box {
+  display: block;
+  background-color: var(--secondary-light);
+}
+
+>>>>>>> f56c2fc5607b04948f065416f0bf051791e82ff7:css/styles.css
+.desc-box a:hover {
+  color: var(--color-red);
+}
+
+.desc-box a:focus {
+  color:var(--transparent-dark);
+}
+
+.desc-box p {
+  line-height: 18px;
+  color: var(--color-grey-text);
+<<<<<<< HEAD:css/style.css
+  margin: 12px auto 32px;
+  width: 255px;
+}
+=======
+  margin: 12px 0 32px;
+}*/
+>>>>>>> f56c2fc5607b04948f065416f0bf051791e82ff7:css/styles.css
 
 .pagination {
   list-style: none;
