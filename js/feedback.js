@@ -33,6 +33,16 @@ feedbackClose.addEventListener("click", function(evt) {
   feedbackPopup.classList.remove("modal-error");
 });
 
+window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode === 27) {
+    if (feedbackPopup.classList.contains("modal-show")) {
+      evt.preventDefault();
+      feedbackPopup.classList.remove("modal-show");
+      feedbackPopup.classList.remove("modal-error");
+    }
+  }
+});
+
 feedbackForm.addEventListener("submit", function(evt) {
   if (!feedbackName.value || !feedbackEmail.value) {
 evt.preventDefault();
@@ -40,16 +50,6 @@ evt.preventDefault();
   } else {
     if (isStorageSupport) {
       localStorage.setItem("name", feedbackName.value);
-    }
-  }
-});
-
-window.addEventListener("keydown", function(evt) {
-  if (evt.keyCode === 27) {
-    if (feedbackPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      feedbackPopup.classList.remove("modal-show");
-      feedbackPopup.classList.remove("modal-error");
     }
   }
 });
