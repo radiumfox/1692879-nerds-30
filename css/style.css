@@ -263,6 +263,7 @@ img {
   justify-self: end;
   text-align: end;
   width: 115px;
+
 }
 
 .basket-link::before {
@@ -288,12 +289,12 @@ img {
 
 .main-navigation a:active,
 .main-navigation a.active {
-  padding-bottom: 18px;
+  padding-bottom: 19px;
   border-bottom: 2px solid var(--color-red);
 }
 
 .basket-link:active::before {
-  padding-bottom: 16px;
+  padding-bottom: 17px;
   border-bottom: 2px solid var(--color-red);
 }
 
@@ -1268,6 +1269,11 @@ img {
 .down-arrow {
   fill: #A6A6A6;
   opacity: 0.2;
+}
+
+.up-arrow,
+.down-arrow {
+  vertical-align: middle;
 }
 
 .up-arrow {
