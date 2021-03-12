@@ -40,7 +40,7 @@
           <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
             <fieldset class="range-filter">
               <legend>Стоимость:</legend>
-              <!--<input type="range" name="price" id="price-filter" min="0" max="15000" value="12000">-->
+              <input class="visually-hidden" type="range" name="price" id="price-filter" min="0" max="15000" value="12000">
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"></div>
@@ -105,7 +105,7 @@
               <li class="sorting-item"><a href="#">По названию</a></li>
             </ul>
             <div class="arrows">
-              <a class="down-arrow" href="#">
+              <a class="down-arrow active" href="#">
                 <svg width="11" height="10"><path d="M5.5 10L0 0H11"/></svg>
               </a>
               <a class="up-arrow" href="#">
@@ -203,17 +203,15 @@
         </div>
       </div>
     </main>
-   <footer class="main-footer">
+    <footer class="main-footer">
       <section>
         <h2 class="visually-hidden">Контакты</h2>
         <div class="footer-map">
           <div class="footer-contact">
-            <span>NЁRDS DESIGN STUDIO</span>
-            <div class="contacts-box">
-              <address class="address">191186, Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</address>
-              <div class="phone-number"><a href="tel:+78122757575">тел. +7 (812) 275-75-75</a></div>
-            </div>
-            <a class="button feedback-button" href="blank.html">Напишите нам</a>
+            <p>NЁRDS DESIGN STUDIO</p>
+            <address class="address">191186, Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</address>
+            <div class="phone-number"><a href="tel:+78122757575">тел. +7 (812) 275-75-75</a></div>
+            <a class="button feedback-button" href="blank.html" aria-label="Открыть окно с формой обратной связи">Напишите нам</a>
           </div>
           <iframe class="map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614701867694!5m2!1sru!2sru" width="1440" height="416" style="border:0;" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
         </div>
@@ -247,8 +245,8 @@
           </li>
         </ul>
         <div class="discount-wrapper">
-          <span>Давайте дружить, это выгодно!</span>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
+          <p class="proposal">Давайте дружить, это выгодно!</p>
+          <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </section>
     </footer>
