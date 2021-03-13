@@ -1353,11 +1353,11 @@ img {
 }
 
 .desc-box {
-  display: none;
+  display: block;
   position: absolute;
   background-color: var(--secondary-light);
   text-align: center;
-  z-index: 1;
+  z-index: -1;
   padding-bottom: 44px;
   width: 358px;
   top: 390px;
@@ -1365,9 +1365,12 @@ img {
   max-height: 188px;
 }
 
+.product-card:focus-within .desc-box {
+  z-index: 1;
+}
+
 .product-card:hover .desc-box {
-  display: block;
-  background-color: var(--secondary-light)
+  z-index: 1;
 }
 
 .desc-box-title {
