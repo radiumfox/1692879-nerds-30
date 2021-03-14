@@ -9,7 +9,7 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -58,9 +58,9 @@
           </li>
         </ul>
         <div class="slider-controls">
-          <button class="slider-dot active" type="button" aria-label="Первый слайд"></button>
-          <button class="slider-dot" type="button" aria-label="Второй слайд"></button>
-          <button class="slider-dot" type="button" aria-label="Третий слайд"></button>
+          <button class="slider-dot active" type="button" aria-label="Первый слайд" onclick="currentSlide(1)"></button>
+          <button class="slider-dot" type="button" aria-label="Второй слайд" onclick="currentSlide(2)"></button>
+          <button class="slider-dot" type="button" aria-label="Третий слайд" onclick="currentSlide(3)"></button>
         </div>
       </section>
       <section class="services">
@@ -204,5 +204,6 @@
       </div>
     </section>
     <script src="js/feedback.min.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
