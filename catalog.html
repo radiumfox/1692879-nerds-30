@@ -7,7 +7,7 @@
     <link rel="icon" href="img/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -15,7 +15,7 @@
     <header class="main-header catalog-header">
       <div class="main-header-container">
         <a href="index.html" class="nerds-logo">
-          <img src="img/content/nerds-logo.png" alt="Логотип Nёrds" width="160" height="66">
+          <img src="img/content/nerds-logo.svg">
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
@@ -40,7 +40,8 @@
           <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
             <fieldset class="range-filter">
               <legend>Стоимость:</legend>
-              <input class="visually-hidden" type="range" name="price" id="price-filter" min="0" max="15000" value="12000">
+              <input class="visually-hidden" disabled type="range" name="price" id="price-filter" min="0" max="15000" value="12000">
+              <label class="visually-hidden" for="price-filter">Отсортировать по цене</label>
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"></div>
@@ -105,10 +106,10 @@
               <li class="sorting-item"><a href="#">По названию</a></li>
             </ul>
             <div class="arrows">
-              <a class="down-arrow active" href="#">
+              <a class="down-arrow active" aria-label="Отсортировать в порядке убывания" href="#">
                 <svg width="11" height="10"><path d="M5.5 10L0 0H11"/></svg>
               </a>
-              <a class="up-arrow" href="#">
+              <a class="up-arrow" aria-label="Отсортировать в порядке возрастания" href="#">
                 <svg width="11" height="10"><path d="M5.5 0L0 10H11L5.5 0Z"/></svg>
               </a>
             </div>
@@ -117,78 +118,62 @@
             <h2 class="templates-title visually-hidden">Список шаблонов</h2>
             <ul class="templates-list">
               <li class="templates-item">
-                <article>
-                  <div class="product-card">
-                    <img class="item-img" src="img/content/sedona.jpg" alt="Шаблон сайта Sedona" width="358" height="578">
-                    <div class="desc-box">
-                      <h3 class="desc-box-title"><a href="#">Sedona</a></h3>
-                      <p>Информационный сайт для&nbsp;туристов</p>
-                      <button class="button price-button" type="button" aria-label="Добавить шаблон сайта Sedona в корзину">9 900 Р. </button>
-                    </div>
+                <article class="product-card">
+                  <img class="item-img" src="img/content/sedona.jpg" alt="Шаблон сайта Sedona" width="358" height="578">
+                  <div class="desc-box">
+                    <h3 class="desc-box-title"><a href="#">Sedona</a></h3>
+                    <p>Информационный сайт для&nbsp;туристов</p>
+                    <button class="button price-button" type="button" aria-label="Добавить шаблон сайта Sedona в корзину">9 900 Р. </button>
                   </div>
                 </article>
               </li>
               <li class="templates-item">
-                <article>
-                  <div class="product-card">
-                    <img class="item-img" src="img/content/pink.jpg" alt="Шаблон сайта PINK" width="358" height="578">
-                    <div class="desc-box">
-                      <h3 class="desc-box-title"><a href="#">Pink app</a></h3>
-                      <p>Продуктовый лендинг приложения iOS и Android</p>
-                      <button class="button price-button" type="button" aria-label="Добавить шаблон сайта PINK в корзину">9 900 Р.</button>
-                    </div>
+                <article class="product-card">
+                  <img class="item-img" src="img/content/pink.jpg" alt="Шаблон сайта PINK" width="358" height="578">
+                  <div class="desc-box">
+                    <h3 class="desc-box-title"><a href="#">Pink app</a></h3>
+                    <p>Продуктовый лендинг приложения iOS и Android</p>
+                    <button class="button price-button" type="button" aria-label="Добавить шаблон сайта PINK в корзину">9 900 Р.</button>
                   </div>
                 </article>
               </li>
               <li class="templates-item">
-                <article>
-                  <div class="product-card">
-                    <img class="item-img" src="img/content/barbershop.jpg" alt="Шаблон сайта Barbershop" width="358" height="578">
-                    <div class="desc-box">
-                      <h3 class="desc-box-title"><a href="#">Barbershop</a></h3>
-                      <p>Сайт салона красоты. Для&nbsp;мужчин, да.</p>
-                      <button class="button price-button" type="button" aria-label="Добавить шаблон сайта Barbershop в корзину">9 900 Р.</button>
-                    </div>
+                <article class="product-card">
+                  <img class="item-img" src="img/content/barbershop.jpg" alt="Шаблон сайта Barbershop" width="358" height="578">
+                  <div class="desc-box">
+                    <h3 class="desc-box-title"><a href="#">Barbershop</a></h3>
+                    <p>Сайт салона красоты. Для&nbsp;мужчин, да.</p>
+                    <button class="button price-button" type="button" aria-label="Добавить шаблон сайта Barbershop в корзину">9 900 Р.</button>
                   </div>
                 </article>
               </li>
               <li class="templates-item">
-                <article>
-                  <div class="product-card">
-                    <img class="item-img" src="img/content/mishka.jpg" alt="Шаблон сайта Mishka" width="358" height="578">
-                    <div class="desc-box">
-                      <h3 class="desc-box-title"><a href="#">Mishka</a></h3>
-                      <p>Интернет-магазин вязаных&nbsp;игрушек.</p>
-                      <button class="button price-button" type="button" aria-label="Добавить шаблон сайта Mishka в корзину">9 900 Р.</button>
-                    </div>
+                <article class="product-card">
+                  <img class="item-img" src="img/content/mishka.jpg" alt="Шаблон сайта Mishka" width="358" height="578">
+                  <div class="desc-box">
+                    <h3 class="desc-box-title"><a href="#">Mishka</a></h3>
+                    <p>Интернет-магазин вязаных&nbsp;игрушек.</p>
+                    <button class="button price-button" type="button" aria-label="Добавить шаблон сайта Mishka в корзину">9 900 Р.</button>
                   </div>
                 </article>
               </li>
               <li class="templates-item">
-                <article>
-                  <div class="product-card">
-                    <img class="item-img" src="img/content/aplus.jpg" alt="Шаблон сайта A PLUS" width="358" height="578">
-                    <div class="desc-box">
-                      <div class="container">
-                        <h3 class="desc-box-title"><a href="#">A Plus</a></h3>
-                        <p>Лендинг курсов повышения квалификации.</p>
-                        <button class="button price-button" type="button" aria-label="Добавить шаблон сайта A PLUS в корзину">9 900 Р.</button>
-                      </div>
-                    </div>
+                <article class="product-card">
+                  <img class="item-img" src="img/content/aplus.jpg" alt="Шаблон сайта A PLUS" width="358" height="578">
+                  <div class="desc-box">
+                    <h3 class="desc-box-title"><a href="#">A Plus</a></h3>
+                    <p>Лендинг курсов повышения квалификации.</p>
+                    <button class="button price-button" type="button" aria-label="Добавить шаблон сайта A PLUS в корзину">9 900 Р.</button>
                   </div>
                 </article>
               </li>
               <li class="templates-item">
-                <article>
-                  <div class="product-card">
-                    <img class="item-img" src="img/content/kvast.jpg" alt="Шаблон сайта КВАСТ" width="358" height="578">
-                    <div class="desc-box">
-                      <div class="container">
-                        <h3 class="desc-box-title"><a href="#">Кваст</a></h3>
-                        <p>Промо-сайт производителя крафтового кваса.</p>
-                        <button class="button price-button" type="button" aria-label="Добавить шаблон сайта КВАСТ в корзину">9 900 Р.</button>
-                      </div>
-                    </div>
+                <article class="product-card">
+                  <img class="item-img" src="img/content/kvast.jpg" alt="Шаблон сайта КВАСТ" width="358" height="578">
+                  <div class="desc-box">
+                    <h3 class="desc-box-title"><a href="#">Кваст</a></h3>
+                    <p>Промо-сайт производителя крафтового кваса.</p>
+                    <button class="button price-button" type="button" aria-label="Добавить шаблон сайта КВАСТ в корзину">9 900 Р.</button>
                   </div>
                 </article>
               </li>
@@ -263,8 +248,8 @@
             <input class="type-email" id="feedback-email" type="email" name="email" placeholder="email@example.com">
           </div>
           <div class="text-form">
-            <span>Текст письма:</span>
-            <div><textarea class="message-area" name="message" placeholder="В свободной форме"></textarea></div>
+            <label for="textarea">Текст письма:</label>
+            <textarea id="textarea" class="message-area" name="message" placeholder="В свободной форме"></textarea>
           </div>
           <button class="button send-button" type="submit">Отправить</button>
         </form>

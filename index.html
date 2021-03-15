@@ -7,15 +7,15 @@
     <link rel="icon" href="img/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <header class="main-header">
       <div class="main-header-container">
         <a class="nerds-logo">
-          <img src="img/content/nerds-logo.png" alt="Логотип Nёrds" width="160" height="66">
+          <img src="img/content/nerds-logo.svg">
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
@@ -68,23 +68,20 @@
         <ul class="services-list">
           <li class="services-item websites">
             <article>
-              <img src="img/decorative/illustration-1.jpg" alt="иллюстрация" width="300" height="146">
               <h3>Веб-сайты</h3>
               <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
               <a class="button order-red-button" href="#" aria-label="Перейти в каталог">Заказать</a>
             </article>
           </li>
-          <li class="services-item">
+          <li class="services-item apps">
             <article>
-              <img src="img/decorative/illustration-2.jpg" alt="иллюстрация" width="300" height="146">
               <h3>Приложения</h3>
               <p>Покорите топ-10 приложений в&nbsp;AppStore и Google Play</p>
               <a class="button order-green-button" href="#" aria-label="Перейти в каталог">Заказать</a>
             </article>
           </li>
-          <li class="services-item">
+          <li class="services-item presentations">
             <article>
-              <img src="img/decorative/illustration-3.jpg" alt="иллюстрация" width="300" height="146">
               <h3>Презентации</h3>
               <p>Вы даже не подозреваете, насколько вы изумительны!</p>
               <a class="button order-yellow-button" href="#" aria-label="Перейти в каталог">Заказать</a>
@@ -93,7 +90,6 @@
         </ul>
       </section>
       <section class="about-us">
-        <div class="about-us-wrapper">
         <div class="about-us-left">
           <h2 class="visually-hidden">О нас</h2>
           <p class="intro">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
@@ -106,7 +102,6 @@
           </ul>
         </div>
         <div class="about-us-right">
-          <img src="img/decorative/nerds-illustration.jpg" alt="Нёрдс" width="360" height="208">
           <p>С 2004 года любим точность во всём:</p>
           <dl class="benefits-list">
             <div class="benefits-item">
@@ -123,12 +118,11 @@
             </div>
           </dl>
         </div>
-        </div>
       </section>
       <section class="our-partners">
         <h2 class="visually-hidden">Наши партнёры</h2>
         <ul class="partners-list">
-          <li class="partners-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/htmlacademy_logo.png" alt="HTMLacademy" width="199" height="68"></a></li>
+          <li class="partners-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/htmlacademy_logo.svg" alt="HTMLacademy" width="199" height="68"></a></li>
           <li class="partners-item"><a href="#"><img src="img/content/barbershop_logo.png" alt="Barbershop Borodinski" width="209" height="90"></a></li>
           <li class="partners-item"><a href="#"><img src="img/content/pink_logo.png" alt="PINK" width="185" height="52"></a></li>
           <li class="partners-item"><a href="#"><img src="img/content/mishka_logo.png" alt="Mishka" width="173" height="84"></a></li>
@@ -195,8 +189,8 @@
             <input class="type-email" id="feedback-email" type="email" name="email" placeholder="email@example.com">
           </div>
           <div class="text-form">
-            <span>Текст письма:</span>
-            <div><textarea class="message-area" name="message" placeholder="В свободной форме"></textarea></div>
+            <label for="textarea">Текст письма:</label>
+            <textarea id="textarea" class="message-area" name="message" placeholder="В свободной форме"></textarea>
           </div>
           <button class="button send-button" type="submit">Отправить</button>
         </form>
@@ -204,6 +198,6 @@
       </div>
     </section>
     <script src="js/feedback.min.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/slider.min.js"></script>
   </body>
 </html>
