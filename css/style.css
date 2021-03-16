@@ -689,15 +689,15 @@ img {
   justify-content: center;
 }
 
-.partners-item a {
+.partners-item img {
   opacity: 0.2;
 }
 
-.partners-item a:hover {
+.partners-item img:hover {
   opacity: 1;
 }
 
-.partners-item a:active {
+.partners-item img:active {
   opacity: 0.1;
 }
 
@@ -1511,6 +1511,10 @@ img {
   background-color: var(--color-grey-hover);
 }
 
+.pagination-item a:focus {
+  outline: 1px dotted var(--secondary-dark);
+}
+
 .pagination-item a:active {
   background-color: var(--color-grey-click);
   color: var(--transparent-dark);
@@ -1524,10 +1528,6 @@ img {
   border: 3px solid var(--page-button-border);
   box-shadow: none;
   padding: 13px 17px;
-}
-
-.pagination-item a:focus {
-  outline: 1px dotted var(--secondary-dark);
 }
 
 .pagination-item:last-child a.active {
