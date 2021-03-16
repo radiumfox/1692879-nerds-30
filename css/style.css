@@ -103,7 +103,7 @@ img {
   padding: 16px 54px;
 }
 
-.button:focus {
+.button:focus{
   outline: 1px dotted var(--primary-dark);
 }
 
@@ -228,10 +228,6 @@ img {
   opacity: 0.3;
 }
 
-.nerds-logo:focus {
-  outline: 1px dotted var(--primary-dark);
-}
-
 .main-navigation {
   margin-top: 26px;
   display: grid;
@@ -304,10 +300,6 @@ img {
 
 .main-navigation a:active {
   color: var(--transparent-dark);
-}
-
-.main-navigation a:focus {
-  outline: 1px dotted var(--primary-dark);
 }
 
 .basket-link.active::after {
@@ -701,10 +693,6 @@ img {
   opacity: 0.1;
 }
 
-.partners-item a:focus {
-  outline: 1px dotted var(--primary-dark);
-}
-
 .partners-item img:nth-child(n+5) {
   margin-top: 30px;
 }
@@ -812,10 +800,6 @@ img {
 
 .social-circle:active path {
   opacity: 0.3;
-}
-
-.social-circle:focus {
-  outline: 1px dotted var(--primary-dark);
 }
 
 .discount-wrapper {
@@ -1336,10 +1320,6 @@ img {
   color: var(--secondary-dark);
 }
 
-.sorting-list a:focus {
-  outline: 1px dotted var(--primary-dark);
-}
-
 .sorting span {
   font-size: 18px;
   line-height: 30px;
@@ -1376,11 +1356,6 @@ img {
 .down-arrow:active,
 .down-arrow.active {
   fill: var(--arrow-active);
-}
-
-.up-arrow:focus,
-.down-arrow:focus{
-  outline: 1px dotted var(--secondary-dark);
 }
 
 /* templates */
@@ -1464,10 +1439,6 @@ img {
 
 .desc-box a:active {
   color: var(--transparent-dark);
-}
-
-.desc-box a:focus {
-  outline: 1px dotted var(--secondary-dark);
 }
 
 .desc-box p {
